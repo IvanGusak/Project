@@ -50,6 +50,6 @@ ReactDOM.render(
      Name     |      Type     |   Default  |                                    Description                                          |          
 ------------- | ------------- | ---------- | ----------------------------------------------------------------------------------------| 
     active    |     Boolean   |    false   |                     reveal(if true) or hide(false) sideBar                              | 
-     side     |     String    |   ‘left’   |  It can be defined only like "left" or "right". It"s helps to choose side of the screen.| 
+     side     |     String    |   "left"   |  It can be defined only like "left" or "right". It"s helps to choose side of the screen.| 
    className  |     String    |     ""     |              Sets a class to give customized styles to the sideBar.                     | 
   handleToggle|    function   |  () => {}  |             Callback function to be invoked when the outside area is clicked.           | 
