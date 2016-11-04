@@ -12,7 +12,7 @@ class Main extends React.Component{
     constructor(){
         super();
         this.state = {
-            active: false,
+            active: false
         }
         this.handleClick = this.handleClick.bind(this);
     };
@@ -24,14 +24,16 @@ class Main extends React.Component{
             <div>
                 <button 
                     onClick={ this.handleClick } 
-                    className={ this.state.active ? "button-hidden" : "button-active" }>
+                    className={ this.state.active ? "button-hidden" : "button-active" }
+                >
                         Toggle
                 </button>
                 <SideNav 
                     active={ this.state.active } 
                     side="left"  
                     handleToggle={ this.handleClick } 
-                    className="custom">   
+                    className="custom"
+                >   
                         <h3>You can attach here any element you want.</h3>
                 </SideNav>
             </div>)
@@ -50,6 +52,6 @@ ReactDOM.render(
      Name     |      Type     |   Default  |                                    Description                                          |          
 ------------- | ------------- | ---------- | ----------------------------------------------------------------------------------------| 
     active    |     Boolean   |    false   |                     reveal(if true) or hide(false) sideBar                              | 
-     side     |     String    |   ‘left’   |  It can be defined only like "left" or "right". It"s helps to choose side of the screen.| 
+     side     |     String    |   "left"   |  It can be defined only like "left" or "right". It"s helps to choose side of the screen.| 
    className  |     String    |     ""     |              Sets a class to give customized styles to the sideBar.                     | 
   handleToggle|    function   |  () => {}  |             Callback function to be invoked when the outside area is clicked.           | 

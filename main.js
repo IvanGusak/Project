@@ -19,14 +19,16 @@ class Main extends React.Component {
             <div>
                 <button 
                     onClick={ this.handleClick } 
-                    className={ this.state.active ? "button-hidden" : "button-active" }>
+                    className={ this.state.active ? "button-hidden" : "button-active" }
+                >
                         Toggle
                 </button>
                 <SideNav 
                     active={ this.state.active } 
                     side="left"  
                     handleToggle={ this.handleClick } 
-                    className="custom">   
+                    className="custom"
+                >   
                         <h3>You can attach here any element you want.</h3>
                 </SideNav>
             </div>)

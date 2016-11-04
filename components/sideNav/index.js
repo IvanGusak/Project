@@ -17,9 +17,6 @@ const defaultProps = {
 };
 
 class SideNav extends React.Component {
-  constructor(...arg){
-    super(...arg);
-  };
   render(){
     return(
       <div className={ this.props.active ? styles.active : styles.hidden }>
@@ -29,7 +26,8 @@ class SideNav extends React.Component {
         />
         <div 
           className={ styles.sideMenu } 
-          data-side={ this.props.side }>
+          data-side={ this.props.side }
+        >
             <div className={ this.props.className }>
               { this.props.children }
             </div>
