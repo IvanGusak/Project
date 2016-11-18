@@ -1,0 +1,106 @@
+@import "./config/mixins";
+@import "./config/common";
+@import "./mixins";
+@import "./variables";
+
+%button-square-form {
+    @include border-radius(2px);
+    @include align-content($height);
+
+    &[data-ripple=true] {
+        @extend %ripple-effect;
+    }
+
+    &[data-wave=true] {
+        @extend %wave-effect;
+    }
+
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    margin: 8px;
+    height: $height;
+    min-width: $min-width;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: $fontSize;
+    font-family: "Roboto", sans-serif;
+    font-weight: $weight;
+    text-decoration: none;
+}
+
+%button-circle-form {
+    @include border-radius($float-width);
+    @include align-content($float-width);
+
+    &[data-ripple=true] {
+        @extend %ripple-effect;
+    }
+
+    position: relative;
+    display: inline-block;
+    height: $float-width;
+    width: $float-width;
+    margin: 8px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: $icon-size;
+    font-weight: $float-weight;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;    
+}
+
+.raised {
+    @extend %button-square-form;
+    @include transition(0.4s);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    min-width: $min-width; 
+
+    &:not([disabled]) {
+        box-shadow: 0 2px 1px 0px $shadow;
+    }
+
+    &:not([disabled]):active {
+        box-shadow: 0px 4px 4px 0px  $shadow;
+    }  
+    &[disabled] {
+        cursor: default;
+        box-shadow: 0px;  
+    }
+}
+
+.flat {
+    @extend %button-square-form;
+    @include transition(0.4s);
+
+    min-width: $min-width; 
+
+    &[disabled] {
+        cursor: default;
+    }
+}
+
+.floating {
+    @extend %button-circle-form;   
+    @include transition(0.4s);
+
+    box-shadow: 0px 2px 1px 0px #cbcbcb;
+
+    &:active {
+        box-shadow: 0px 4px 1px 0px #cbcbcb;
+    } 
+}
+
+@include  button-theme(light, $light-color, $light-background, $light-hover, $light-active);
+@include  button-theme(dark, $dark-color, $dark-background, $dark-hover, $dark-disabled);
+@include  floating-theme(light, $float-light-color, $float-light-background, $float-light-hover);
+@include  floating-theme(dark, $float-dark-color, $float-dark-background, $float-dark-hover);

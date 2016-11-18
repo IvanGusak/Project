@@ -1,3 +1,99 @@
+@import "./config/mixins";
+@import "./config/variables";
+
 .hidden{
-    visibility: hidden;
+    visibility: hidden; 
+}
+
+.fullScreen {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+%wave-effect {
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    &:not([disabled])::before {
+        @extend .fullScreen;
+        @include transition(0.4s);
+        position: absolute;
+        z-index: 3;
+        opacity: 0;
+        margin: auto;
+        content: "";  
+        width: 85%;
+        height: $button-width; 
+    }
+
+    &:not([disabled]):hover {
+
+        &::before {
+            @include transition(opacity 1s ease-out);
+            @include wave-animation();
+            @include animation-config(wave-animation,3s,infinite,ease-out);
+            @include border-radius($button-width);
+            opacity: 0.12;
+            box-shadow: 0px 0px 0px $button-width $darkness;
+        }
+    }
+
+    &:not([disabled]):active {
+
+        &::before {
+            opacity: 0;
+            @include transition(opacity .1s step-start);
+        }
+    }
+
+    &:not([disabled]):not(:active) {
+        
+        &::before {
+            @include transition(opacity .8s bezier-curve(0,0,0.9,1));
+        }
+    }
+}
+
+%ripple-effect {
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    &:not([disabled])::after {
+        @extend .fullScreen;
+        @include border-radius($button-width); 
+        opacity: 0;
+        content: "";  
+        left: 50%;
+        margin-left: -50%;
+        top: 50%;
+        margin-top: -50%;
+        width: 0px;
+        height: 0px;
+        background-color: $darkness;
+    }
+
+    &:not([disabled]):active {
+
+        &::after {
+            padding: 50%;
+        }  
+    }
+
+    &:not([disabled]):not(:active) {
+
+        &::after {
+            @include transition(padding .4s step-end);
+            @include ripple-animation();
+            @include animation-config(ripple-animation,0.5s,1,linear);
+        }
+    }
 }

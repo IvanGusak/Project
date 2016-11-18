@@ -5,11 +5,11 @@
           border-radius: $radius;
 }
 
-@mixin translateX($X) {
-    -webkit-transform: translate($X); 
-       -moz-transform: translate($X); 
-        -ms-transform: translate($X); 
-            transform: translate($X);    
+@mixin transform($action) {
+    -webkit-transform: $action; 
+       -moz-transform: $action; 
+        -ms-transform: $action; 
+            transform: $action;
 }
 
 @mixin transition($delay) {
@@ -19,10 +19,45 @@
             transition: $delay;
 }
 
-@mixin fullScreen() {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+@mixin align-content($height) {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    line-height: $height;
+    vertical-align: middle;
+}
+
+@mixin animation-config($keyname,$duration,$iteration: 1,$function: linear) {
+    -webkit-animation-name: $keyname; 
+    -webkit-animation-duration: $duration; 
+    -webkit-animation-iteration-count: $iteration; 
+    -webkit-animation-timing-function: $function;
+            animation-name: $keyname;
+            animation-duration: $duration;
+            animation-iteration-count: $iteration;
+            animation-timing-function: $function;
+}
+
+@mixin wave-animation() {
+    @-webkit-keyframes wave-animation {
+        0% { -webkit-transform: scale(0.9); }
+        50% { -webkit-transform: scale(1.05); }
+        100% { -webkit-transform: scale(0.9); }
+    }
+    @keyframes wave-animation {
+        0% { transform: scale(0.9); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(0.9); }
+    }
+}
+
+@mixin ripple-animation() {
+    @-webkit-keyframes ripple-animation {
+        0% { -webkit-transform: scale(0.1); opacity: 0.22; }
+        100% { -webkit-transform: scale(1.3); opacity: 0; }
+    }
+    @keyframes ripple-animation {
+        0% { transform: scale(0.1); opacity: 0.22; }
+        100% { transform: scale(1.3); opacity: 0; }
+    }
 }

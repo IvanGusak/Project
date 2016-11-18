@@ -3,10 +3,10 @@
 @import "./config/variables";
 
 .active {
-  @include fullScreen;
+  @extend .fullScreen;
 
   .backSide {
-    @include fullScreen;
+    @extend .fullScreen;
     @include transition($animation-duration);
     opacity: $opacity; 
     cursor: pointer; 
@@ -15,12 +15,13 @@
 }
 
 .hidden {
+  
   .sideMenu[data-side="left"] {
-    @include translateX(-100%);
+    @include transform(translateX(-100%));
   }
 
   .sideMenu[data-side="right"] {
-    @include translateX(100%);
+    @include transform(translateX(100%));
   }
 } 
 
