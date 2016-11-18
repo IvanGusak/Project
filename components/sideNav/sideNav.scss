@@ -1,0 +1,44 @@
+@import "./config/mixins";
+@import "./config/common";
+@import "./config/variables";
+
+.active {
+  @include fullScreen;
+
+  .backSide {
+    @include fullScreen;
+    @include transition($animation-duration);
+    opacity: $opacity; 
+    cursor: pointer; 
+    background-color: $dark;
+  }
+}
+
+.hidden {
+  .sideMenu[data-side="left"] {
+    @include translateX(-100%);
+  }
+
+  .sideMenu[data-side="right"] {
+    @include translateX(100%);
+  }
+} 
+
+.sideMenu {
+  @include transition($animation-duration);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $light;  
+}
+
+.sideMenu[data-side="left"] {
+  left: 0px;
+}
+
+.sideMenu[data-side="right"] {
+  right: 0px;
+}

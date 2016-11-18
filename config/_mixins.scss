@@ -1,0 +1,28 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin translateX($X) {
+    -webkit-transform: translate($X); 
+       -moz-transform: translate($X); 
+        -ms-transform: translate($X); 
+            transform: translate($X);    
+}
+
+@mixin transition($delay) {
+    -webkit-transition: $delay;
+       -moz-transition: $delay;
+         -o-transition: $delay;
+            transition: $delay;
+}
+
+@mixin fullScreen() {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
