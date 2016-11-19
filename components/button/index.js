@@ -17,7 +17,6 @@ const defaultProps = {
     children: "",
     disabled: undefined,
     handleClick: () => {},
-    href: "#",
     ripple: true,
     theme: "light",
     type: "raised",
@@ -34,7 +33,7 @@ class Button extends React.Component {
             event.preventDefault();
         }
         else {
-            if(this.props.href == "#") {
+            if(!this.props.href) {
                 event.preventDefault();
                 this.props.handleClick();
             }

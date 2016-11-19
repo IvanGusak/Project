@@ -57,13 +57,9 @@
 .raised {
     @extend %button-square-form;
     @include transition(0.4s);
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
 
     min-width: $min-width; 
+    cursor: pointer;
 
     &:not([disabled]) {
         box-shadow: 0 2px 1px 0px $shadow;
@@ -83,6 +79,7 @@
     @include transition(0.4s);
 
     min-width: $min-width; 
+    cursor: pointer;
 
     &[disabled] {
         cursor: default;
