@@ -5,6 +5,7 @@ import styles from "./button.scss";
 const propsTypes = {
     className: React.PropTypes.string,
     children: React.PropTypes.node,
+    disabled: React.PropTypes.bool,
     handleClick: React.PropTypes.func,
     href: React.PropTypes.string,
     ripple: React.PropTypes.bool,
@@ -14,8 +15,7 @@ const propsTypes = {
 }
 const defaultProps = {
     className: "",
-    children: "",
-    disabled: undefined,
+    disabled: false,
     handleClick: () => {},
     ripple: true,
     theme: "light",
@@ -29,15 +29,7 @@ class Button extends React.Component {
         this.onClick = this.onClick.bind(this);
     }
     onClick(event) {
-        if(this.props.disabled) {
-            event.preventDefault();
-        }
-        else {
-            if(!this.props.href) {
-                event.preventDefault();
-                this.props.handleClick();
-            }
-        }   
+        !this.props.disabled ? this.props.handleClick() : event.preventDefault() ;
     }
     render() {
         return(

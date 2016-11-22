@@ -13,7 +13,7 @@ class Main extends React.Component {
                 <Button theme="light" disabled > Button </Button>  
                 <Button type="flat" theme="light" > Button </Button>
                 <Button type="flat" theme="light" disabled > Button </Button>
-                <Button href="##" type="floating"  theme="dark">
+                <Button href="##" type="floating"  theme="light">
                     <i className="material-icons">add</i>
                 </Button>
             </div>)

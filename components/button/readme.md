@@ -29,7 +29,8 @@ ReactDOM.render(
     document.getElementById("root")
 );
 ```
-
+## Description
+  In that example, i used  styles from <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> in <i className="material-icons">add</i>.
 ## Properties : 
 
      Name     |      Type     |   Default  |                                    Description                                          |          
@@ -41,4 +42,5 @@ ReactDOM.render(
  className    |     String    |     ""     |  Set a class to style the Component.                                                    |
  ripple       |     boolean   |    true    |  If true, component will have a ripple effect on click.                                 |
  wave         |     boolean   |    true    |  If true, component will have a wave effect on click. Not allowed for "floating" type   |
+ disabled     |     boolean   |    false   |  If true? component will ignore all action on it                                        |
 
