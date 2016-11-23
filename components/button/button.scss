@@ -98,6 +98,6 @@
 }
 
 @include  button-theme(light, $light-color, $light-background, $light-hover, $light-active);
-@include  button-theme(dark, $dark-color, $dark-background, $dark-hover, $dark-disabled);
+@include  button-theme(dark, $dark-color, $dark-background, $dark-hover, $dark-active);
 @include  floating-theme(light, $float-light-color, $float-light-background, $float-light-hover);
 @include  floating-theme(dark, $float-dark-color, $float-dark-background, $float-dark-hover);

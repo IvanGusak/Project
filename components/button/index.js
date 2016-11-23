@@ -33,6 +33,7 @@ class Button extends React.Component {
     }
     render() {
         return(
+            <div className= { `${ this.props.className } ${ styles.inline }` }>
                 <a 
                     href= { this.props.href } 
                     className= { `${ styles[this.props.theme] } ${ styles[this.props.type] }` } 
@@ -40,11 +41,10 @@ class Button extends React.Component {
                     data-ripple= { this.props.ripple }
                     data-wave= { this.props.wave }
                     onClick= { this.onClick }      
-                >
-                    <div className= { `${ this.props.className } ${ styles.fullScreen }` }>
-                        { this.props.children }
-                    </div>
-                </a>           
+                > 
+                    { this.props.children }
+                </a> 
+            </div>          
         )
     }
 } 
