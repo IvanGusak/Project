@@ -1,8 +1,8 @@
 @mixin button-theme($name, $color, $background, $hover, $active) {
-    .#{ $name }:not([disabled]) {
+    #{ $name }:not([disabled]) {
 
         &.raised {
-            color: $color;
+            color: $color ;
             background-color: $background;
 
             &:hover {
@@ -40,7 +40,7 @@
 }
 
 @mixin floating-theme($name, $color, $background, $hover) {
-    .#{ $name }.floating  {
+    #{ $name }.floating  {
         color: $color; 
         background-color: $background; 
 
