@@ -8,6 +8,7 @@ const propsTypes = {
     disabled: React.PropTypes.bool,
     handleClick: React.PropTypes.func,
     href: React.PropTypes.string,
+    label:React.PropTypes.string,
     ripple: React.PropTypes.bool,
     theme: React.PropTypes.string,
     type: React.PropTypes.string,
@@ -17,6 +18,7 @@ const defaultProps = {
     className: "",
     disabled: false,
     handleClick: () => {},
+    label: "",
     ripple: true,
     theme: "light",
     type: "raised",
@@ -24,27 +26,28 @@ const defaultProps = {
 }
 
 class Button extends React.Component {
-    constructor(...arg) {
-        super(...arg);
+    constructor(props) {
+        super(props);
         this.onClick = this.onClick.bind(this);
     }
     onClick(event) {
         !this.props.disabled ? this.props.handleClick() : event.preventDefault() ;
     }
+    className = this.props.type + "-" + this.props.theme;
+    label = this.props.children ? this.props.children : this.props.label;
     render() {
         return(
-            <div className= { `${ this.props.className } ${ styles.inline }` }>
                 <a 
                     href= { this.props.href } 
-                    className= { `${ styles[this.props.theme] } ${ styles[this.props.type] }` } 
+                    className= { `${ styles[this.className] } ${ this.props.className }` } 
                     disabled= { this.props.disabled } 
                     data-ripple= { this.props.ripple }
+                    data-theme= { this.props.theme }
                     data-wave= { this.props.wave }
                     onClick= { this.onClick }      
                 > 
-                    { this.props.children }
-                </a> 
-            </div>          
+                    { this.label }
+                </a>         
         )
     }
 } 

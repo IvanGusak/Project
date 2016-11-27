@@ -39,6 +39,7 @@ ReactDOM.render(
  href         |     String    |     ""     |  Creates a link for the button.                                                         | 
  theme        |     String    |  "light"   |  Selects "light" or "dark" theme for dark or light background                           | 
  handleClick  |    Function   |  () => {}  |  Callback function to be invoked when the <Button /> area is clicked.                   | 
+ label        |     String    |     ""     |  Set a name of button                                                                   |
  className    |     String    |     ""     |  Set a class to style the Component.                                                    |
  ripple       |     boolean   |    true    |  If true, component will have a ripple effect on click.                                 |
  wave         |     boolean   |    true    |  If true, component will have a wave effect on click. Not allowed for "floating" type   |
