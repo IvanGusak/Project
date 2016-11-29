@@ -10,19 +10,21 @@ const propsTypes = {
     href: React.PropTypes.string,
     label:React.PropTypes.string,
     ripple: React.PropTypes.bool,
-    theme: React.PropTypes.string,
-    type: React.PropTypes.string,
-    wave: React.PropTypes.bool
+    theme: React.PropTypes.oneOf(["light", "dark"]).isRequired,
+    type: React.PropTypes.oneOf(["raised", "flat", "floating"]).isRequired,
+    wave: React.PropTypes.bool,
+    icon: React.PropTypes.bool
 }
 const defaultProps = {
     className: "",
     disabled: false,
     handleClick: () => {},
     label: "",
-    ripple: true,
+    ripple: false,
     theme: "light",
     type: "raised",
-    wave: true
+    wave: false,
+    icon: false
 }
 
 class Button extends React.Component {
@@ -33,20 +35,18 @@ class Button extends React.Component {
     onClick(event) {
         !this.props.disabled ? this.props.handleClick() : event.preventDefault() ;
     }
-    className = this.props.type + "-" + this.props.theme;
-    label = this.props.children ? this.props.children : this.props.label;
     render() {
         return(
                 <a 
                     href= { this.props.href } 
-                    className= { `${ styles[this.className] } ${ this.props.className }` } 
+                    className= { `${ styles[this.props.type + "-" + this.props.theme] } ${ this.props.className }` } 
                     disabled= { this.props.disabled } 
                     data-ripple= { this.props.ripple }
-                    data-theme= { this.props.theme }
                     data-wave= { this.props.wave }
-                    onClick= { this.onClick }      
+                    onClick= { this.onClick }   
+                    data-icon= {this.props.icon}   
                 > 
-                    { this.label }
+                    { this.props.children ? this.props.children : this.props.label } 
                 </a>         
         )
     }

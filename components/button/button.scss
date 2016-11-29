@@ -210,3 +210,21 @@
         background-color: $float-dark-hover;
     }
 }
+.raised-light[data-icon=true],
+.raised-dark[data-icon=true],
+.flat-light[data-icon=true],
+.flat-dark[data-icon=true],
+.floating-light[data-icon=true],
+.floating-dark[data-icon=true]  {
+    height: $mini-width;
+    min-width: $mini-width;
+    width: $mini-width;
+    line-height: $mini-width;
+    padding: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    
+    & i {
+        font-size: $mini-width*0.75;
+        line-height: inherit !important;
+    }
+}
