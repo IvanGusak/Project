@@ -47,12 +47,11 @@ class Main extends React.Component {
                 /> 
                 <Dialog 
                     active= { this.state.active }
-                    title= "Title"
                     topButtons= { this.topButtons }
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
                 > 
-                    Some another content
+                    Some another text
                 </Dialog>
             </div>)
     };

@@ -20,11 +20,14 @@
 }
 
 @mixin align-content($height) {
+    white-space: nowrap;
     text-align: center;
     align-content: center;
     align-items: center;
-    line-height: $height;
+    justify-content: center;
+    //line-height: inherit !important;
     vertical-align: middle;
+
 }
 
 @mixin animation-config($keyname,$duration,$iteration: 1,$function: linear) {

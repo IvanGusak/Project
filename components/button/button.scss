@@ -1,9 +1,13 @@
 @import "./config/mixins";
 @import "./config/common";
-@import "./mixins";
 @import "./variables";
 
-%button-square-form {
+
+.raised-light,
+.raised-dark,
+.flat-light,
+.flat-dark {
+    @include transition(0.4s);
     @include border-radius(2px);
     @include align-content($height);
 
@@ -23,26 +27,50 @@
     min-width: $min-width;
     outline: none;
     border: none;
+    line-height: $height;
     text-transform: uppercase;
     font-size: $fontSize;
     font-family: "Roboto", sans-serif;
     font-weight: $weight;
     text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0, 0.0); 
+
+    &[disabled] {
+        cursor: default;
+    }                
 }
 
-%button-circle-form {
+.raised-light,
+.raised-dark {
+
+    &:not([disabled]) {
+        box-shadow: 0 2px 1px 0px $shadow;
+    }
+
+    &:not([disabled]):active {
+        box-shadow: 0px 4px 4px 0px  $shadow;
+    }  
+    &[disabled] {
+        box-shadow: 0px;  
+    }
+}
+
+.floating-light,
+.floating-dark { 
+    @include transition(0.4s);
     @include border-radius($float-width);
     @include align-content($float-width);
 
     &[data-ripple=true] {
         @extend %ripple-effect;
     }
-
     position: relative;
     display: inline-block;
     height: $float-width;
     width: $float-width;
     margin: 8px;
+    line-height: $float-width;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     outline: none;
@@ -51,19 +79,23 @@
     font-size: $icon-size;
     font-weight: $float-weight;
     font-family: "Roboto", sans-serif;
-    text-decoration: none;    
+    text-decoration: none; 
+    cursor: pointer;
+    box-shadow: 0px 2px 1px 0px #cbcbcb;
+    -webkit-tap-highlight-color: rgba(0,0,0, 0.0);
+
+    &:active {
+        box-shadow: 0px 4px 1px 0px #cbcbcb;
+    } 
 }
 
-.raised {
-    @extend %button-square-form;
+.raised-light,
+.raised-dark {
     @include transition(0.4s);
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
 
     min-width: $min-width; 
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0, 0.0);
 
     &:not([disabled]) {
         box-shadow: 0 2px 1px 0px $shadow;
@@ -76,31 +108,136 @@
         cursor: default;
         box-shadow: 0px;  
     }
+} 
+.raised-light {
+    color: $light-color ;
+    background-color: $light-background;
+
+    &:hover {
+        background-color: $light-background*0.88;
+    }
+
+    &:active {
+        background-color: $light-background*0.76;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        color: fade-out($light-color,0.74);
+        background-color: fade-out($light-color,0.88);
+    }
 }
 
-.flat {
-    @extend %button-square-form;
+.raised-dark{
+    color: $dark-color ;
+    background-color: $dark-background;
+
+    &:hover {
+        background-color: $dark-background*0.88;
+    }
+
+    &:active {
+        background-color: $dark-background*0.76;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        color: fade-out($dark-color,0.74);
+        background-color: fade-out($dark-color,0.88);
+    }
+}
+
+.flat-light,
+.flat-dark {
     @include transition(0.4s);
 
     min-width: $min-width; 
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0, 0.0);
 
     &[disabled] {
+        pointer-events: none;
         cursor: default;
     }
 }
 
-.floating {
-    @extend %button-circle-form;   
-    @include transition(0.4s);
+.flat-light {
+    color: $light-color;
 
-    box-shadow: 0px 2px 1px 0px #cbcbcb;
+    &:hover {
+        background-color: $light-hover;
+    }
 
     &:active {
-        box-shadow: 0px 4px 1px 0px #cbcbcb;
-    } 
+        background-color: $light-active;
+    }
+
+    &[disabled] {
+        color: fade-out($light-color,0.74); 
+    }
 }
 
-@include  button-theme(light, $light-color, $light-background, $light-hover, $light-active);
-@include  button-theme(dark, $dark-color, $dark-background, $dark-hover, $dark-disabled);
-@include  floating-theme(light, $float-light-color, $float-light-background, $float-light-hover);
-@include  floating-theme(dark, $float-dark-color, $float-dark-background, $float-dark-hover);
+.flat-dark {
+    color: $dark-color;
+
+    &:hover {
+        background-color: $dark-hover;
+    }
+
+    &:active {
+        background-color: $dark-active;
+    }
+
+    &[disabled] { 
+        color: fade-out($dark-color,0.74); 
+    }
+}
+
+.floating-light  {
+    color: $float-light-color; 
+    background-color: $float-light-background; 
+
+    &:hover {
+        background-color: $float-light-hover;
+    }
+}
+
+.floating-dark  {
+    line-height: 52px;
+    color: $float-dark-color; 
+    background-color: $float-dark-background; 
+
+    &:hover {
+        background-color: $float-dark-hover;
+    }
+}
+.raised-light[data-icon=true],
+.raised-dark[data-icon=true],
+.flat-light[data-icon=true],
+.flat-dark[data-icon=true],
+.floating-light[data-icon=true],
+.floating-dark[data-icon=true]  {
+    height: $mini-width;
+    min-width: $mini-width;
+    width: $mini-width;
+    line-height: $mini-width;
+    padding: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    
+    & * {
+        font-size: $mini-width*0.75;
+        line-height: inherit !important;
+    }
+}
+
+.raised-light,
+.raised-dark,
+.flat-light,
+.flat-dark,
+.floating-light,
+.floating-dark {
+
+    & * {
+        line-height: inherit !important;
+    }
+}
