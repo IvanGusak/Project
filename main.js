@@ -6,9 +6,13 @@ import Button from "./components/button/index";
 import SideNav from "./components/sideNav/index";
 
 class Main extends React.Component {
-    state = {
-        active: false
+    constructor(...arg) {
+        supre(...arg);
+        this.state = {
+            active: false
+        }
     }
+    
     handleClick=()=> {
         this.setState({ 
             active: !this.state.active
