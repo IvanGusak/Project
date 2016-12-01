@@ -16,6 +16,7 @@ class Main extends React.Component {
     }
     actionButtons = [
         { 
+            className: "test",
             handleClick: this.handleClick, 
             label: "Cancel", type: "flat", 
             wave: false 
@@ -29,10 +30,11 @@ class Main extends React.Component {
     ];
     topButtons = [
         {  
-            className: "top-button",  
+            className: "top-button",
             label: "\u2716", 
             type: "floating", 
             theme: "dark", 
+            handleClick: this.handleClick, 
             icon: true, 
             ripple: true },  
     ];
@@ -47,11 +49,12 @@ class Main extends React.Component {
                 /> 
                 <Dialog 
                     active= { this.state.active }
+                    title="Title"
                     topButtons= { this.topButtons }
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
                 > 
-                    Some another text
+                    Some  content
                 </Dialog>
             </div>)
     };
