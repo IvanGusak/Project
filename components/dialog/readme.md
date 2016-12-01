@@ -11,8 +11,8 @@ import Button from "./components/button/index";
 import SideNav from "./components/sideNav/index";
 
 class Main extends React.Component {
-    constructor(...arg) {
-        supre(...arg);
+    constructor() {
+        super();
         this.state = {
             active: false
         }
