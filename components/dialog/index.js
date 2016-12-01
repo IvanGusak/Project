@@ -8,21 +8,15 @@ const propsTypes = {
     active: React.PropTypes.bool,
     className: React.PropTypes.string,
     children: React.PropTypes.node,
-    content: React.PropTypes.string,
-    handleToggle: React.PropTypes.func,
     title: React.PropTypes.string,
     topButtons: React.PropTypes.array,
-    type: React.PropTypes.string
 }
 const defaultProps = { 
     actionButtons: [],
     active: true,
     className: "",
-    content: "",
-    handleToggle: () => {},
     title: "",
     topButtons: [],
-    type: "bottom",
 }
 
 class Dialog extends React.Component {
@@ -31,7 +25,7 @@ class Dialog extends React.Component {
         return (
             <Button 
                 key= { id } { ...button } 
-                className= { `${styles["title-button"]} `} 
+                className= { `${ styles["title-button"] } ${ button.className }` } 
             /> 
         )
     });
@@ -40,7 +34,7 @@ class Dialog extends React.Component {
         return (
             <Button 
                 key= { id } { ...button } 
-                className= { `${styles["action-button"]} `} 
+                className= { `${ styles["action-button"] } ${ button.className }` } 
             /> 
         )
     });
@@ -52,8 +46,9 @@ class Dialog extends React.Component {
                     onClick= { this.props.handleToggle } 
                 />
                 <div className= { styles.dialog } >
-                    <div className= { this.props.title ? styles.title : "" } > 
-                        { this.props.title } { this.topButtons }
+                    <div className= { styles.title } > 
+                        { this.props.title } 
+                        { this.topButtons }
                     </div>
                     <div className= { styles.content } > 
                         { this.props.children } 

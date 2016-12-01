@@ -236,7 +236,8 @@
 .flat-dark,
 .floating-light,
 .floating-dark {
-
+    @extend .noselect;
+    
     & * {
         line-height: inherit !important;
     }
