@@ -37,12 +37,12 @@ ReactDOM.render(
 ------------- | ------------- | ---------- | ----------------------------------------------------------------------------------------| 
  type         |     String    |  "raised"  |  Selects buttons with appearance as "raised" "flat" or "floating" style.                | 
  href         |     String    |     ""     |  Creates a link for the button.                                                         | 
- theme        |     String    |  "light"   |  Selects "light" or "dark" theme for dark or light background                           | 
+ theme        |     String    |  "light"   |  Selects "light" or "dark" theme for dark or light background.                          | 
  handleClick  |    Function   |  () => {}  |  Callback function to be invoked when the <Button /> area is clicked.                   | 
- label        |     String    |     ""     |  Set a button's name                                                                    |
+ label        |     String    |     ""     |  Set a button's name.                                                                   |
  className    |     String    |     ""     |  Set a class to style the Component.                                                    |
  ripple       |     boolean   |    true    |  If true, component will have a ripple effect on click.                                 |
- icon         |     boolean   |    false
- wave         |     boolean   |    true    |  If true, component will have a wave effect on click. Not allowed for "floating" type   |
- disabled     |     boolean   |    false   |  If true, component will ignore all action on it                                        |
+ mini         |     boolean   |    false   |  If true, component will have mini theme.                                               |
+ wave         |     boolean   |    true    |  If true, component will have a wave effect on click. Not allowed for "floating" type.  |
+ disabled     |     boolean   |    false   |  If true, component will ignore all action on it.                                       |
 

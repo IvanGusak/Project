@@ -13,37 +13,40 @@ const propsTypes = {
 }
 const defaultProps = { 
     actionButtons: [],
-    active: true,
+    active: false,
     className: "",
     title: "",
     topButtons: [],
 }
 
 class Dialog extends React.Component {
-    topButtons = this.props.topButtons.map((button,id) => {
-        const className = button.className;
-        return (
-            <Button 
-                key= { id } { ...button } 
-                className= { `${ styles["title-button"] } ${ button.className }` } 
-            /> 
-        )
-    });
-    actionButtons = this.props.actionButtons.map((button,id) => {
-        const className = button.className;
-        return (
-            <Button 
-                key= { id } { ...button } 
-                className= { `${ styles["action-button"] } ${ button.className }` } 
-            /> 
-        )
-    });
+    constructor(props) {
+        super(props);
+        this.topButtons = this.props.topButtons.map((button,id) => {
+            const className = button.className;
+            return (
+                <Button 
+                    key= { id } { ...button } 
+                    className= { `${ styles["title-button"] } ${ button.className }` } 
+                /> 
+            )
+        });
+        this.actionButtons = this.props.actionButtons.map((button,id) => {
+            const className = button.className;
+            return (
+                <Button 
+                    key= { id } { ...button } 
+                    className= { `${ styles["action-button"] } ${ button.className }` } 
+                /> 
+            )
+        });
+    }
     render() {
         return (
             <div className= { `${ this.props.active ? styles.active : styles.hidden } ${ this.props.className }` } >
                 <div 
-                    className= { styles.overlay } 
-                    onClick= { this.props.handleToggle } 
+                    className= { styles.overlay }
+                    onClick= { this.props.handleToggle }
                 />
                 <div className= { styles.dialog } >
                     <div className= { styles.title } > 

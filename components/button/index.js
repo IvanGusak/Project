@@ -13,7 +13,7 @@ const propsTypes = {
     theme: React.PropTypes.oneOf(["light", "dark"]).isRequired,
     type: React.PropTypes.oneOf(["raised", "flat", "floating"]).isRequired,
     wave: React.PropTypes.bool,
-    icon: React.PropTypes.bool
+    mini: React.PropTypes.bool
 }
 const defaultProps = {
     className: "",
@@ -24,7 +24,7 @@ const defaultProps = {
     theme: "light",
     type: "raised",
     wave: false,
-    icon: false
+    mini: false
 }
 
 class Button extends React.Component {
@@ -44,7 +44,7 @@ class Button extends React.Component {
                     data-ripple= { this.props.ripple }
                     data-wave= { this.props.wave }
                     onClick= { this.onClick }   
-                    data-icon= {this.props.icon}   
+                    data-mini= {this.props.mini}   
                 > 
                     { this.props.children ? this.props.children : this.props.label } 
                 </a>         

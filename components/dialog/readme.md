@@ -83,4 +83,4 @@ ReactDOM.render(
  className    |     String    |     ""     |  Sets a class to give customized styles to the dialog.                                                      | 
  title        |     String    |     ""     |  Sets string to the Title part of component.                                                                |
  topButtons   |     Array     |     []     |  An array of object, that transfers properties to the <Button />  and shows buttons on the top of component.|                                                    |
- 
+ handleToggle |     function  |   () => {} |  Callback function to be invoked when the overlay area is clicked.                                          |

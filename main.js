@@ -39,7 +39,7 @@ class Main extends React.Component {
             type: "floating", 
             theme: "dark", 
             handleClick: this.handleClick, 
-            icon: true, 
+            mini: true, 
             ripple: true },  
     ];
     render(){
@@ -53,7 +53,7 @@ class Main extends React.Component {
                 /> 
                 <Dialog 
                     active= { this.state.active }
-                    title="Title"
+                    title= "Title"
                     topButtons= { this.topButtons }
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
