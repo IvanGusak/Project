@@ -11,14 +11,9 @@ class Main extends React.Component {
         super();
         this.state = {
             active: false,
-            checked: false
         }
     }
-    check = () => {
-        this.setState({ 
-            checked: !this.state.checked
-         })
-    }
+    
     handleClick = () => {
         this.setState({ 
             active: !this.state.active
@@ -75,10 +70,6 @@ class Main extends React.Component {
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
                 > 
-                    <Checkbox 
-                        handleClick= { this.check }
-                        checked= { this.state.checked }
-                    />
                     { this.text }   
                 </Dialog>
             </div>)

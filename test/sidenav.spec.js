@@ -10,7 +10,8 @@ import SideNav from "../components/sidenav/index";
 describe("<SideNav /> component test suit",() => {
   const side = "right";
   const testClass = "custom";
-  const wrapper = mount(<SideNav active={true} side={side} />);
+  const outClick = sinon.spy();
+  let wrapper = mount(<SideNav active={true} side={side} />);
   it("Component created ", () => {
       expect(wrapper).to.exist;
   })
@@ -28,15 +29,12 @@ describe("<SideNav /> component test suit",() => {
     );
     expect(wrapper.contains(<div className="unique" />)).to.equal(true);
   });
-  describe("Testing <SideNav /> component with shallow render",() => {
-    const outClick = sinon.spy();
-    const wrapper = shallow(<SideNav active={true} handleToggle={outClick} className={testClass}/>);
-    it("after 'onClick' event  out of the SideNav borders, component should be hidden",() => {
-      wrapper.childAt(0).simulate('click');
-      expect(outClick.calledOnce).to.equal(true);
-    })
-    it("Checking if attr 'className' assigned to <div /> node",() => {
-      expect(wrapper.contains(<div className={testClass} />)).to.equal(true);
-    })
+  it("after 'onClick' event  out of the SideNav borders, component should be hidden",() => {
+    wrapper = shallow(<SideNav active={true} handleToggle={outClick} className={testClass}/>);
+    wrapper.childAt(0).simulate('click');
+    expect(outClick.calledOnce).to.equal(true);
   })
+  it("Checking if attr 'className' assigned to <div /> node",() => {
+    expect(wrapper.contains(<div className={testClass} />)).to.equal(true);
+  }) 
 });
