@@ -121,7 +121,7 @@
     &:not([disabled]):not(:active) {
 
         &::after {
-            @include transition(padding .4s step-end);
+            @include transition(padding .8s step-end);
             @include ripple-animation();
             @include animation-config(ripple-animation,0.5s,1,linear);
         }
@@ -131,7 +131,6 @@
 .noselect {
   -webkit-touch-callout: none; 
     -webkit-user-select: none; 
-     -khtml-user-select: none;
        -moz-user-select: none; 
         -ms-user-select: none; 
             user-select: none; 

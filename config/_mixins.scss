@@ -57,10 +57,10 @@
 @mixin ripple-animation() {
     @-webkit-keyframes ripple-animation {
         0% { -webkit-transform: scale(0.1); opacity: 0.22; }
-        100% { -webkit-transform: scale(1.3); opacity: 0; }
+        100% { -webkit-transform: scale(2.3); opacity: 0; }
     }
     @keyframes ripple-animation {
         0% { transform: scale(0.1); opacity: 0.22; }
-        100% { transform: scale(1.3); opacity: 0; }
+        100% { transform: scale(2.3); opacity: 0; }
     }
 }

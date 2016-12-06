@@ -45,4 +45,3 @@ ReactDOM.render(
  mini         |     boolean   |    false   |  If true, component will have mini theme.                                               |
  wave         |     boolean   |    true    |  If true, component will have a wave effect on click. Not allowed for "floating" type.  |
  disabled     |     boolean   |    false   |  If true, component will ignore all action on it.                                       |
-

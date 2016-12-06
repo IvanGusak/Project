@@ -32,10 +32,12 @@
     background-color: #ffffff;
     
     @media screen and (max-width: 640px) {
-        min-width: 95vw ;
+        min-width: 95vw;
+        max-width: 95vw;
     }
     @media screen and  (min-width: 640px) {
-        min-width: 560px ;
+        min-width: 560px;
+        max-width: 560px;
     }
     .title {
         position: relative;
@@ -43,6 +45,7 @@
         top: 0;
         right: 0;
         left: 0;
+        max-height: 100px;
         padding: 24px 24px 0px 24px;
         margin: 0px;
         font-size: 24px;
@@ -50,8 +53,12 @@
     }
 
     .content {
-        @extend .overflow-Hidden;
-        display: block;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        word-wrap:break-word;
+        width: 100%;
+        max-height: 150px;
         padding: 20px 24px 24px 24px;
         font-family: "Roboto", sans-serif;
     }
@@ -76,4 +83,7 @@
 .title-button {
     float: right;
     margin: 0px;
+    width: 16px;
+    font-size: 16px;
+    background-color: $transparent;
 }
