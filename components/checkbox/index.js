@@ -22,7 +22,7 @@ class Checkbox extends React.Component {
         return(
             <div 
                 className= { `${ styles[this.props.theme] } ${ this.props.className } `} 
-                data-checked= { this.props.checked}
+                data-checked= { this.props.checked }
                 disabled= { this.props.disabled }
                 onClick= { this.props.handleClick }
             >
