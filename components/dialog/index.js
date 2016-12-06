@@ -43,12 +43,12 @@ class Dialog extends React.Component {
     }
     render() {
         return (
-            <div className= { `${ this.props.active ? styles.active : styles.hidden } ${ this.props.className }` } >
+            <div className= {  this.props.active ? styles.active : styles.hidden  } >
                 <div 
                     className= { styles.overlay }
                     onClick= { this.props.handleToggle }
                 />
-                <div className= { styles.dialog } >
+                <div className= { `${ styles.dialog } ${ this.props.className }`} >
                     <div className= { styles.title } > 
                         { this.props.title } 
                         { this.topButtons }
