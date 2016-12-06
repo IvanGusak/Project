@@ -1,17 +1,47 @@
 @import "./config/mixins";
 @import "./config/variables";
 
-.hidden{
-    visibility: hidden; 
+.hidden {
+    visibility: hidden;
+}
+
+.active {
+    visibility: visible;   
+}
+
+.inline {
+    display: inline-block;
 }
 
 .fullScreen {
-    position: fixed;
+    position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
 }
+
+.overflow-Hidden {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-overflow: hidden;
+    -ms-overflow: hidden;
+    overflow: hidden; 
+}
+
+.align-center {
+    left: 50%;
+    margin-left: -50%;
+    top: 50%;
+    margin-top: -50%;
+}
+.on-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
 
 %wave-effect {
     overflow: hidden;
@@ -29,7 +59,7 @@
         margin: auto;
         content: "";  
         width: 85%;
-        height: $button-width; 
+        height: 200%;
     }
 
     &:not([disabled]):hover {
@@ -96,4 +126,13 @@
             @include animation-config(ripple-animation,0.5s,1,linear);
         }
     }
+}
+
+.noselect {
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
 }

@@ -1,3 +1,8 @@
+# \<Dialog /> component 
+
+Some example how to use component:
+
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -39,7 +44,7 @@ class Main extends React.Component {
             type: "floating", 
             theme: "dark", 
             handleClick: this.handleClick, 
-            mini: true, 
+            icon: true, 
             ripple: true },  
     ];
     render(){
@@ -53,7 +58,7 @@ class Main extends React.Component {
                 /> 
                 <Dialog 
                     active= { this.state.active }
-                    title= "Title"
+                    title="Title"
                     topButtons= { this.topButtons }
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
@@ -68,3 +73,14 @@ ReactDOM.render(
     <Main />,
     document.getElementById("root")
 );
+```
+## Properties : 
+
+     Name     |      Type     |   Default  |                                    Description                                                              |          
+------------- | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------- | 
+ actionButtons|     Array     |     []     |  An array of object, that transfers properties to the <Button />  and shows buttons on the top of component.| 
+ active       |     Boolean   |    false   |  If true, <Dialog /> component will be revealed.                                                            | 
+ className    |     String    |     ""     |  Sets a class to give customized styles to the dialog.                                                      | 
+ title        |     String    |     ""     |  Sets string to the Title part of component.                                                                |
+ topButtons   |     Array     |     []     |  An array of object, that transfers properties to the <Button />  and shows buttons on the top of component.|                                                    |
+ handleToggle |     function  |   () => {} |  Callback function to be invoked when the overlay area is clicked.                                          |

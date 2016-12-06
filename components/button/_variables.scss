@@ -23,7 +23,7 @@ $background: #cbcbcb !default;
 
 $hover: fade-out(#999999,0.88) !default;
 
-$float-width: 56px !default;
+$float-width: 52px !default;
 $float-mini-width: 40px !default;
 $float-light-color: #ffffff !default;
 $float-light-background: #ff4081 !default;
@@ -32,3 +32,5 @@ $float-dark-color: #212121 !default;
 $float-dark-background: #ffffff !default;
 $float-dark-hover: $float-dark-background*0.88 !default;
 $float-weight: 800 !default;
+
+$mini-width: 32px;
