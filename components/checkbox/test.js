@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Checkbox from "./components/checkbox/index";
+import Checkbox from "./index";
 
-class Main extends React.Component {
+class Checkbox_Main extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -52,7 +52,4 @@ class Main extends React.Component {
     };
 };
 
-ReactDOM.render(
-    <Main />,
-    document.getElementById("root")
-);
+export default Checkbox_Main;

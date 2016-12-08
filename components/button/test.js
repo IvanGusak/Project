@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Button from "./components/button/index";
-import SideNav from "./components/sideNav/index";
+import Button from "./index";
+import SideNav from "../sideNav/index";
 
-class Main extends React.Component {
+class Button_Main extends React.Component {
     render(){
         return(
             <div className="fontScreen">
@@ -20,7 +20,4 @@ class Main extends React.Component {
     };
 };
 
-ReactDOM.render(
-    <Main />,
-    document.getElementById("root")
-);
+export default Button_Main;

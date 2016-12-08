@@ -4,13 +4,14 @@
 
 .active {
   @extend .fullScreen;
+  z-index: 10;
 
   .backSide {
     @extend .fullScreen;
     @include transition($animation-duration);
     opacity: $opacity; 
     cursor: pointer; 
-    background-color: $dark;
+    background-color: $dark;  
   }
 }
 
@@ -27,7 +28,7 @@
 
 .sideMenu {
   @include transition($animation-duration);
-  position: absolute;
+  position: fixed;
   top: 0px;
   bottom: 0px;
   width: 250px;

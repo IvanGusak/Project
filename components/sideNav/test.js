@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import SideNav from "./components/sidenav/index";
-import Button from "./components/button/index";
+import SideNav from "./index";
+import Button from "../button/index";
 
-class Main extends React.Component {
+class SideNav_Main extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -38,7 +38,4 @@ class Main extends React.Component {
     };
 };
 
-ReactDOM.render(
-    <Main />,
-    document.getElementById("root")
-);
+export default SideNav_Main;

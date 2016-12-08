@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Dialog from "./components/dialog/index";
-import Button from "./components/button/index";
-import SideNav from "./components/sideNav/index";
-import Checkbox from "./components/checkbox/index";
+import Dialog from "../dialog/index";
+import Button from "../button/index";
+import Checkbox from "../checkbox/index";
 
-class Main extends React.Component {
+class Dialog_Main extends React.Component {
     constructor() {
         super();
         this.state = {
             active: false,
+            checked: false
         }
     }
-    
     handleClick = () => {
         this.setState({ 
             active: !this.state.active
@@ -56,7 +55,7 @@ class Main extends React.Component {
     ];
     render(){
         return(
-            <div className="fontScreen">
+            <div >
                 <Button 
                     label= "switch"
                     handleClick= { this.handleClick }
@@ -76,7 +75,4 @@ class Main extends React.Component {
     };
 };
 
-ReactDOM.render(
-    <Main />,
-    document.getElementById("root")
-);
+export default Dialog_Main;

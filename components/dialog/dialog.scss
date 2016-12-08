@@ -7,10 +7,12 @@
     @extend .fullScreen;
     opacity: 0.12;
     background-color: $darkness;
+    cursor: pointer;
 }
 
 .active {
-    @include transition(.3s);
+    @include transition(opacity .3s ease-in);
+    @extend .fullScreen;
     opacity: 1;
 
     .dialog {
@@ -20,7 +22,8 @@
 }
 
 .hidden {
-    @include transition(.3s);
+    @include transition(.3s ease-out);
+    @extend .fullScreen;
     opacity: 0;
 }
 
