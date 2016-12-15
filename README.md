@@ -6,8 +6,9 @@
 *  SideNav component => [SideNav](https://github.com/IvanGusak/Project/tree/master/components/sideNav)
 *  Checkbox component => [Checkbox](https://github.com/IvanGusak/Project/tree/master/components/checkbox)
 *  Dialog component => [Dialog](https://github.com/IvanGusak/Project/tree/master/components/dialog)
+
 ## Usage
-  #### simple example based on Button component 
+### simple example based on Button component 
 ```javascript
 import React from "react";
 import ReactDOM from "react-dom";
@@ -33,9 +34,3 @@ ReactDOM.render(
 );
 
 ```
-
-
-## Getting started
-1. Clone this repository
-2. Run **npm install && npm start** 
-3.  Visit **localhost: 3333** in your browser
