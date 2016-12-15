@@ -1,27 +1,22 @@
-.button-active {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  border: none;
-  border-radius: 15px;
-  padding: 14px;
-  font-size: 18px;
-  background-color: #3D3E3E;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s; 
+/*.button {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
-.button-active:hover {
-  background-color: #72788A;
-  color: #3D3E3E;
-}
+.aside {
+    padding-top: 25px;
 
-.button-hidden {
-  visibility: hidden;
-}
+} 
 
-.button:active {
-  outline: none;
-  border: none;
-}
+#example {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-left: 250px;
+    padding-top: 25px;
+    box-shadow: -2px 0px 1px 1px #777777;
+}*/
