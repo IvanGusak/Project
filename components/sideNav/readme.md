@@ -24,7 +24,7 @@ class Main extends React.Component{
         return(
             <div>
                 <Button 
-                    label= "Toggle
+                    label= "Toggle"
                     handleClick={ this.handleClick } 
                     ripple
                     wave
