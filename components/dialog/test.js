@@ -1,16 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Dialog from "./components/dialog/index";
-import Button from "./components/button/index";
-import SideNav from "./components/sideNav/index";
+import Dialog from "../dialog/index";
+import Button from "../button/index";
+import Checkbox from "../checkbox/index";
 
-class Main extends React.Component {
+class Dialog_Main extends React.Component {
     constructor() {
         super();
         this.state = {
-            active: false
+            active: false,
+            checked: false
         }
+    }
+    handleClick = () => {
+        this.setState({ 
+            active: !this.state.active
+         })
     }
     text = (
         `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
@@ -25,14 +31,8 @@ class Main extends React.Component {
         "Lorem ipsum dolor sit amet..", comes from 
         a line in section 1.10.32.`
     )
-    handleClick=()=> {
-        this.setState({ 
-            active: !this.state.active
-         })
-    }
     actionButtons = [
         { 
-            className: "test",
             handleClick: this.handleClick, 
             label: "Cancel", type: "flat", 
             wave: false 
@@ -46,17 +46,16 @@ class Main extends React.Component {
     ];
     topButtons = [
         {  
-            className: "top-button",
             label: "\u2716", 
             type: "floating", 
             theme: "dark", 
             handleClick: this.handleClick, 
-            icon: true, 
+            mini: true, 
             ripple: true },  
     ];
     render(){
         return(
-            <div className="fontScreen">
+            <div >
                 <Button 
                     label= "switch"
                     handleClick= { this.handleClick }
@@ -65,21 +64,15 @@ class Main extends React.Component {
                 /> 
                 <Dialog 
                     active= { this.state.active }
-                    title="Title"
+                    title= "Title"
                     topButtons= { this.topButtons }
                     actionButtons= { this.actionButtons }
                     handleToggle= { this.handleClick } 
                 > 
-                    { this.text }
+                    { this.text }   
                 </Dialog>
             </div>)
     };
 };
 
-ReactDOM.render(
-    <Main />,
-    document.getElementById("root")
-);
-=======
-);
-
+export default Dialog_Main;

@@ -24,13 +24,11 @@ class Dialog extends React.Component {
         super(props);
         this.topButtons = this.props.topButtons.map((button,id) => {
             const className = button.className;
-            const component = button.comp;
             return (
-                <Button
+                <Button 
                     key= { id } { ...button } 
                     className= { `${ styles["title-button"] } ${ button.className }` } 
                 /> 
-               
             )
         });
         this.actionButtons = this.props.actionButtons.map((button,id) => {

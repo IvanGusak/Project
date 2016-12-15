@@ -29,7 +29,6 @@ ReactDOM.render(
     document.getElementById("root")
 );
 ```
-
 ## Properties : 
 
      Name     |      Type     |   Default  |                                    Description                                          |          

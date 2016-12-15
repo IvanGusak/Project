@@ -2,6 +2,7 @@
 
 ### Inspired by the React.js tutorials, these examples shows basic ways of usage React.
 ## Content with description
+
 *  Button component   => [Button](https://github.com/IvanGusak/Project/tree/master/components/button)
 *  SideNav component => [SideNav](https://github.com/IvanGusak/Project/tree/master/components/sideNav)
 *  Checkbox component => [Checkbox](https://github.com/IvanGusak/Project/tree/master/components/checkbox)
@@ -9,6 +10,7 @@
 
 ## Usage
 ### simple example based on Button component 
+
 ```javascript
 import React from "react";
 import ReactDOM from "react-dom";
@@ -34,3 +36,4 @@ ReactDOM.render(
 );
 
 ```
+

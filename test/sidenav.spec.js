@@ -28,4 +28,7 @@ describe("<SideNav /> component test suit",() => {
     wrapper.childAt(0).simulate('click');
     expect(outClick.calledOnce).to.equal(true);
   })
+  it("Checking if attr 'className' assigned to <div /> node",() => {
+    expect(wrapper.contains(<div className={testClass} />)).to.equal(true);
+  }) 
 });
