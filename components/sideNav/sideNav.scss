@@ -2,45 +2,48 @@
 @import "./config/common";
 @import "./config/variables";
 
-.active {
-  @extend .fullScreen;
-  z-index: 10;
-
-  .backSide {
+.opened {
     @extend .fullScreen;
-    @include transition($animation-duration);
-    opacity: $opacity; 
-    cursor: pointer; 
-    background-color: $dark;  
-  }
+    z-index: 10;
+
+    .backSide {
+        @extend .fullScreen;
+        @include transition(0.4s ease-in-out);
+        opacity: $opacity; 
+        cursor: pointer; 
+        visibility: visible;
+        background-color: $dark; 
+        z-index: 10; 
+        -webkit-tap-highlight-color: rgba(0,0,0, 0.0);
+    }
 }
 
-.hidden {
-  
-  .sideMenu[data-side="left"] {
-    @include transform(translateX(-100%));
-  }
-
-  .sideMenu[data-side="right"] {
-    @include transform(translateX(100%));
-  }
+.closed {
+    .backSide {
+        @extend .fullScreen;
+        @include transition(.4s ease-in-out);
+        opacity: 0; 
+        visibility: hidden;
+    }
 } 
 
 .sideMenu {
-  @include transition($animation-duration);
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  width: 250px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: $light;  
+    @include transition(.4s);
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    bottom: 0px;
+    width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $light;  
+    -webkit-tap-highlight-color: rgba(0,0,0, 0.0);
 }
 
 .sideMenu[data-side="left"] {
-  left: 0px;
+    left: 0px;
 }
 
 .sideMenu[data-side="right"] {
-  right: 0px;
+    right: 0px;
 }

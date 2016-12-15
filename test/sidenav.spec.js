@@ -11,15 +11,9 @@ describe("<SideNav /> component test suit",() => {
   const side = "right";
   const testClass = "custom";
   const outClick = sinon.spy();
-  let wrapper = mount(<SideNav active={true} side={side} />);
+  let wrapper = shallow(<SideNav active={true} side={side} />);
   it("Component created ", () => {
       expect(wrapper).to.exist;
-  })
-  it("Prop 'active' must be declared and be a bool",() => {
-    expect(wrapper.prop("active")).to.be.a("boolean");
-  })
-  it( "Prop 'side' must be declared and must be equal to 'string' type ",() => {
-    expect(wrapper.prop("side")).to.be.a("string");
   })
   it("should render children when passed in", () => {
     const wrapper = shallow(
@@ -29,7 +23,7 @@ describe("<SideNav /> component test suit",() => {
     );
     expect(wrapper.contains(<div className="unique" />)).to.equal(true);
   });
-  it("after 'onClick' event  out of the SideNav borders, component should be hidden",() => {
+  it("Checking callback function",() => {
     wrapper = shallow(<SideNav active={true} handleToggle={outClick} className={testClass}/>);
     wrapper.childAt(0).simulate('click');
     expect(outClick.calledOnce).to.equal(true);

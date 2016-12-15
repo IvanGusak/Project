@@ -29,8 +29,6 @@ ReactDOM.render(
     document.getElementById("root")
 );
 ```
-## Description
-  In that example, i used  styles from <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> in <i className="material-icons">add</i>.
 ## Properties : 
 
      Name     |      Type     |   Default  |                                    Description                                          |          
