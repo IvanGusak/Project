@@ -1,4 +1,4 @@
-# **React js** components examples  
+# **React js** components  
 
 ### Inspired by the React.js tutorials, these examples shows basic ways of usage React.
 ## Content with description
