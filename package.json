@@ -1,8 +1,11 @@
 {
   "name": "r",
+  "homepage": "https://ivangusak.github.io/Project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run start",
+    "deploy": "gh-pages -d start",
     "test": "mocha -w setup.js test/*.spec.js",
     "start": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./"
   },
@@ -34,6 +37,7 @@
     "enzyme": "^2.5.1",
     "expect-jsx": "^2.6.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.12.0",
     "ignore-styles": "^5.0.1",
     "jest": "^17.0.3",
     "jsdom": "^9.8.3",
@@ -42,10 +46,12 @@
     "quik": "^0.7.2",
     "react": "^15.4.0",
     "react-addons-test-utils": "^15.3.2",
+    "react-scripts": "^0.9.0",
     "react-test-renderer": "^15.4.0",
     "sass-loader": "^4.0.2",
+    "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.14.0"
   },
   "directories": {
     "test": "test"

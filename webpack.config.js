@@ -35,10 +35,6 @@ module.exports = {
         test: /\.(scss|css)$/,
         loader: ExtractTextPlugin.extract("style", "css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap")    
       },
-     /* {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("css?modules&importLoaders=1&localIdentName=bundle__[local]___[hash:base64:5]"),
-      },*/
     ]
   },
   watch: true,
@@ -49,6 +45,6 @@ module.exports = {
         new webpack.DefinePlugin({
           "process.env.NODE_ENV": JSON.stringify("development"),
           VERSION: JSON.stringify(pkg.version)
-    })    
+        }),        
   ]
 }
