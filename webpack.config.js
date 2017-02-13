@@ -8,6 +8,7 @@ module.exports = {
   entry : "./main.js",
   output : {
     path:"./",
+    publicPath: '/Project/',
     filename : "index.js",
   },
   devServer:  {
@@ -48,3 +49,21 @@ module.exports = {
         }),        
   ]
 }
+/*module.exports = function(env) {
+  if (env === 'production') {
+    return merge([
+      common,
+
+      {
+        output: {
+          // Tweak this to match your GitHub project name
+          publicPath: '/Project/',
+        },
+      },
+
+      parts.clean(PATHS.build),
+      
+    ]);
+  }
+
+};*/
