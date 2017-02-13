@@ -49,21 +49,3 @@ module.exports = {
         }),        
   ]
 }
-/*module.exports = function(env) {
-  if (env === 'production') {
-    return merge([
-      common,
-
-      {
-        output: {
-          // Tweak this to match your GitHub project name
-          publicPath: '/Project/',
-        },
-      },
-
-      parts.clean(PATHS.build),
-      
-    ]);
-  }
-
-};*/
