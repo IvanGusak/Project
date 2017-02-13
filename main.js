@@ -80,3 +80,8 @@ ReactDOM.render(
     <Main />,
     document.getElementById("root")
 );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
