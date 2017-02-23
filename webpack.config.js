@@ -8,6 +8,7 @@ module.exports = {
   entry : "./main.js",
   output : {
     path:"./",
+    publicPath: "/Project/",
     filename : "bundle.js",
   },
   devServer:  {
