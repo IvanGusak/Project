@@ -5,7 +5,7 @@ class NotFound extends React.Component {
     render () {
         return (
             <div>
-                Page not found. Back to  <Link to='/'>main</Link>
+                Page not found. Back to  <Link to='/Project'>main</Link>
             </div>
         )
     }
