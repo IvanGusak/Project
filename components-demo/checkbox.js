@@ -1,9 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import Checkbox from "./index";
+import { Checkbox } from "../components";
 
-class Checkbox_Main extends React.Component {
+class CheckboxPage extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -40,7 +39,7 @@ class Checkbox_Main extends React.Component {
                     checked= { false }
                     disabled
                 /> 
-                <span>Disabled checked</span>
+                <span>Disabled unchecked</span>
                 <Checkbox 
                     theme="light" 
                     handleClick= { this.check }  
@@ -52,4 +51,4 @@ class Checkbox_Main extends React.Component {
     };
 };
 
-export default Checkbox_Main;
+export { CheckboxPage };

@@ -1,11 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import Dialog from "../dialog/index";
-import Button from "../button/index";
-import Checkbox from "../checkbox/index";
+import { Button, Dialog } from "../components";
 
-class Dialog_Main extends React.Component {
+class DialogPage extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -51,7 +48,8 @@ class Dialog_Main extends React.Component {
             theme: "dark", 
             handleClick: this.handleClick, 
             mini: true, 
-            ripple: true },  
+            ripple: true 
+        } 
     ];
     render(){
         return(
@@ -75,4 +73,4 @@ class Dialog_Main extends React.Component {
     };
 };
 
-export default Dialog_Main;
+export { DialogPage };

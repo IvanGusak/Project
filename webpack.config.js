@@ -7,9 +7,8 @@ const autoprefixer = require("autoprefixer");
 module.exports = {
   entry : "./main.js",
   output : {
-    path:"./",
-    publicPath: '/Project/',
-    filename : "index.js",
+    path: path.resolve(__dirname, "build"),
+    filename : "bundle.js",
   },
   devServer:  {
     hot: true,

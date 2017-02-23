@@ -1,0 +1,96 @@
+@import "./config/common";
+.app-bar {
+    height: 65px;
+    padding: 5px 30px;
+    background-color: #00BCD4;
+    box-shadow: 1px 1px 2px 1px #aaa;
+}
+.active-item {
+    transition: 0.3s;
+    transform: translateX(10px);
+    background-color: rgba(0,0,0,0.12);
+    &::before {
+        content: "";
+        transform: translateX(-40px);
+        height: 44px;
+        width: 10px;
+        background-color: rgba(0,0,0,0.3);
+        float: left;
+    }
+}
+.drawer {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 250px;
+    padding: 0px !important;
+    margin: 0px;
+    margin-top: 4px;
+    box-shadow: 1px 0px 1px 1px #ddd;
+    overflow: auto;
+    background-color:rgba(0,0,0,0.12);
+}
+.logo {  
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    line-height: 55px;
+    cursor: pointer;
+
+    &:hover,
+    &:not(:active)  {
+        color: white;
+        text-decoration: none; 
+    }
+}
+.list-item,
+.list-item:not(:active),
+.list-item:hover  {
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px 30px;
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer; 
+
+    &:hover {
+        color: white;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    &:focus {  
+        color: #333;
+        background-color: rgba(0,0,0,0.12);
+    }
+}
+.list-collapse {
+    display: block;
+    animation-name: collapse;
+    animation-duration: 0.3s;
+    border-left: 10px solid rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(0,0,0,0.12);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.list-expand {
+    display: none;   
+}
+.non-active-item {
+    &::before {
+        content: "";
+        transform: translateX(-50px);
+    }
+}
+@keyframes collapse {
+    from {opacity: 0}
+    to {opacity: 1}
+}

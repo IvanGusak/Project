@@ -10,6 +10,7 @@
     @include transition(0.4s);
     @include border-radius(2px);
     @include align-content($height);
+    @extend %default-link;
 
     &[data-ripple=true] {
         @extend %ripple-effect;
@@ -53,7 +54,6 @@
     &:not([disabled]):active {
         box-shadow: 0px 4px 4px 0px  $shadow;
         -moz-box-shadow: 0px 4px 4px 0px  $shadow;
-        //-webkit-box-shadow: 0px 4px 4px 0px  $shadow;
     }  
     &[disabled] {
         box-shadow: 0px;  
@@ -65,6 +65,7 @@
     @include transition(0.4s);
     @include border-radius($float-width);
     @include align-content($float-width);
+    @extend %default-link;
 
     &[data-ripple=true] {
         @extend %ripple-effect;
@@ -114,15 +115,18 @@
     }
 } 
 .raised-light {
-    color: $light-color ;
+    color: $light-color;
     background-color: $light-background;
 
     &:hover {
+        color: $light-color;
         background-color: $light-background*0.88;
+        text-decoration: none;
     }
 
     &:active {
         background-color: $light-background*0.76;
+        text-decoration: none;
     }
 
     &[disabled] {
@@ -137,6 +141,7 @@
     background-color: $dark-background;
 
     &:hover {
+        color: $dark-color;
         background-color: $dark-background*0.88;
     }
 
@@ -202,7 +207,11 @@
     background-color: $float-light-background; 
 
     &:hover {
+        color: $float-light-color; 
         background-color: $float-light-hover;
+    }
+    &:not(:hover) {
+        color: $float-light-color; 
     }
 }
 
@@ -212,7 +221,11 @@
     background-color: $float-dark-background; 
 
     &:hover {
+        color: $float-dark-color; 
         background-color: $float-dark-hover;
+    }
+    &:not(:hover) {
+        color: $float-dark-color; 
     }
 }
 .raised-light[data-mini=true],
@@ -240,6 +253,7 @@
 .flat-dark,
 .floating-light,
 .floating-dark {
+    
     @extend .noselect;
     
     & * {

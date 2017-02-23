@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../button/index";
+import { Button } from "../button/index";
 import styles from "./dialog.scss";
 
 const propsTypes = {
@@ -68,4 +68,4 @@ class Dialog extends React.Component {
 Dialog.propTypes = propsTypes;
 Dialog.defaultProps = defaultProps;
 
-export default Dialog;
+export { Dialog };

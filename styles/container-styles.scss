@@ -1,0 +1,27 @@
+@import "./config/common";
+.content {
+    position: relative;
+    width: 85%;
+}
+.main {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;   
+}
+.output-box {    
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 24px 14px 150px 50px;
+}
+.footer {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    bottom: 0px;
+    border-top: 1px solid rgba(0,0,0,0.12); 
+    background-color: #666;  
+}

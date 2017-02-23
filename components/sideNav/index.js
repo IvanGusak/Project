@@ -166,4 +166,4 @@ class SideNav extends React.Component {
 SideNav.propTypes = propsTypes;
 SideNav.defaultProps = defaultProps;
 
-export default SideNav;
+export { SideNav };

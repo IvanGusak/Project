@@ -135,3 +135,13 @@
         -ms-user-select: none; 
             user-select: none; 
 }
+
+%default-link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}

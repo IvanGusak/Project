@@ -1,10 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import SideNav from "./index";
-import Button from "../button/index";
+import { SideNav, Button } from "../components";
 
-class SideNav_Main extends React.Component {
+class SideNavPage extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -38,4 +36,4 @@ class SideNav_Main extends React.Component {
     };
 };
 
-export default SideNav_Main;
+export { SideNavPage };

@@ -35,4 +35,4 @@ class Checkbox extends React.Component {
 Checkbox.propTypes = propsTypes;
 Checkbox.defaultProps = defaultProps;
 
-export default Checkbox;
+export { Checkbox };

@@ -1,13 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import Button from "./index";
-import SideNav from "../sideNav/index";
+import { Button } from "../components";
 
-class Button_Main extends React.Component {
+class ButtonPage extends React.Component {
     render(){
         return(
-            <div className="fontScreen">
+            <div>
                 <Button theme="light" type="raised"  wave ripple> Button </Button>
                 <Button type="raised" theme="dark" wave ripple> Button </Button>
                 <Button theme="light" disabled wave ripple> Button </Button>  
@@ -20,4 +18,4 @@ class Button_Main extends React.Component {
     };
 };
 
-export default Button_Main;
+export { ButtonPage };
