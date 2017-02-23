@@ -15,6 +15,7 @@ module.exports = {
     hot: true,
     inline : true,
     port : 3333,
+    public:'0.0.0.0:3333',
     historyApiFallback: true,
   },
   externals: {
