@@ -11,15 +11,15 @@ import {
     DialogPage
 } from "./components-demo";
 
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import { Router, Route, IndexRoute, browserHistory, hashHistory } from "react-router";
 ReactDOM.render(
-    <Router history={ browserHistory} >
-        <Route path="/Project" component={ App }> 
-            <Route path="/Project/Components" component={ MainPage } />
-            <Route path="/Project/Components/Button" component={ ButtonPage } />
-            <Route path="/Project/Components/Checkbox" component={ CheckboxPage } />
-            <Route path="/Project/Components/SideBar" component={ SideNavPage } />
-            <Route path="/Project/Components/Dialog" component={ DialogPage } />  
+    <Router history={ hashHistory } >
+        <Route path="/" component={ App }> 
+            <Route path="/Components" component={ MainPage } />
+            <Route path="/Components/Button" component={ ButtonPage } />
+            <Route path="/Components/Checkbox" component={ CheckboxPage } />
+            <Route path="/Components/SideBar" component={ SideNavPage } />
+            <Route path="/Components/Dialog" component={ DialogPage } />  
         </Route>
         <Route path="*" component={ NotFound } />
     </Router>,

@@ -14,7 +14,7 @@ class List extends React.Component {
     }
     collapseList(e){
         let target = e.target;
-        if (target.getAttribute("href").match(/Project\/Components/)) {
+        if (target.getAttribute("href").match(/Components/)) {
             this.setState({
                 active: !this.state.active
             })
@@ -24,7 +24,7 @@ class List extends React.Component {
                 active: false
             })
         }
-        if (target.getAttribute("href").match(/Project\/Components\//i)) {
+        if (target.getAttribute("href").match(/Components\//i)) {
             this.setState({
                 active: true
             })
@@ -35,16 +35,16 @@ class List extends React.Component {
         return (
             <div onClick={this.collapseList}>
                 <ListHeader >
-                    <ListLink activeOnlyWhenExact={true} to="/Project/Components" label="Components" />
+                    <ListLink activeOnlyWhenExact={true} to="/Components" label="Components" />
                     <ListCollapse active={this.state.active}>
-                        <ListLink activeOnlyWhenExact={true} to="/Project/Components/Button" label="Button" />
-                        <ListLink activeOnlyWhenExact={true} to="/Project/Components/Dialog" label="Dialog" />
-                        <ListLink activeOnlyWhenExact={true} to="/Project/Components/Checkbox" label="CheckBox" />
-                        <ListLink activeOnlyWhenExact={true} to="/Project/Components/SideBar" label="Sidebar" />
+                        <ListLink activeOnlyWhenExact={true} to="/Components/Button" label="Button" />
+                        <ListLink activeOnlyWhenExact={true} to="/Components/Dialog" label="Dialog" />
+                        <ListLink activeOnlyWhenExact={true} to="/Components/Checkbox" label="CheckBox" />
+                        <ListLink activeOnlyWhenExact={true} to="/Components/SideBar" label="Sidebar" />
                     </ListCollapse>
                 </ListHeader>
                 <ListLink activeOnlyWhenExact={true} to="/" label="Project" />
-                <ListLink activeOnlyWhenExact={true} to="/Project" label="Home" />
+                <ListLink activeOnlyWhenExact={true} to="" label="Home" />
             </div>
         )
     }

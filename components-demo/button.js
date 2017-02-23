@@ -11,7 +11,7 @@ class ButtonPage extends React.Component {
                 <Button theme="light" disabled wave ripple> Button </Button>  
                 <Button type="flat" theme="light" wave ripple> Button </Button>
                 <Button type="flat" theme="light" disabled wave ripple> Button </Button>
-                <Button href="##" type="floating"  theme="light" ripple>
+                <Button type="floating"  theme="light" ripple>
                     <i className="material-icons">add</i>
                 </Button>
             </div>)
