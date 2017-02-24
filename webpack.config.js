@@ -8,7 +8,7 @@ module.exports = {
   entry : "./main.js",
   output : {
     path:"./",
-    publicPath: "/Project/",
+    publicPath: "https://ivangusak.github.io/Project/",
     filename : "bundle.js",
   },
   devServer:  {
