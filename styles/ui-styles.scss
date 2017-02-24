@@ -100,14 +100,16 @@
     from {opacity: 0}
     to {opacity: 1}
 }
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px !important;
-}
-th {
-    background-color: #dddddd;
-}
-tr:nth-child(even) {
-    background-color: #eeeeee;
+.table {
+    & td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    & th {
+        background-color: #dddddd;
+    }
+    & tr:nth-child(even) {
+        background-color: #eeeeee;
+    }
 }

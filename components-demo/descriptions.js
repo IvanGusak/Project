@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router";
 
+import styles from "../styles/ui-styles.scss";
+
 const MainDescription = {
     header: `simple example based on Button component`,
     code: ` 
@@ -58,7 +60,7 @@ const ButtonDescription = {
         document.getElementById("root")
     );`,
     props: 
-        <table>
+        <table className={styles["table"]}>
             <tbody>
                 <tr>
                     <th>Name</th>
@@ -192,7 +194,7 @@ const CheckBoxDescription = {
             document.getElementById("root")
         );`,
     props:
-        <table>
+        <table className={styles["table"]}>
             <tbody>
                 <tr>
                     <th>Name</th>
@@ -307,7 +309,7 @@ const DialogDescription = {
             document.getElementById("root")
         );`,
     props: 
-        <table>
+        <table className={styles["table"]}>
             <tbody>
                 <tr>
                     <th>Name</th>
@@ -401,7 +403,7 @@ const SideNavDescription = {
             document.getElementById("root")
         );`,
     props: 
-        <table>
+        <table className={styles["table"]}>
             <tbody>
                 <tr>
                     <th>Name</th>
