@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d78df5324b4ab13d0463"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4f18bfa24c8ef5f3b1b5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34950,7 +34950,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"hidden":"ui-styles__hidden___1iC5M","active":"ui-styles__active___2Mklj","inline":"ui-styles__inline___2un_e","fullScreen":"ui-styles__fullScreen___Jm73E","overflow-Hidden":"ui-styles__overflow-Hidden___3walt","align-center":"ui-styles__align-center___2juhF","on-center":"ui-styles__on-center____keC6","noselect":"ui-styles__noselect___8T81l","app-bar":"ui-styles__app-bar___2_Di-","active-item":"ui-styles__active-item___3wpn8","drawer":"ui-styles__drawer___2Oz7d","logo":"ui-styles__logo___38Oq-","list-item":"ui-styles__list-item___2PT_7","list-collapse":"ui-styles__list-collapse___Fu5fa","collapse":"ui-styles__collapse___28mRv","list-expand":"ui-styles__list-expand___4Gn1f","non-active-item":"ui-styles__non-active-item___1plCe","wave-animation":"ui-styles__wave-animation___Fz53K","ripple-animation":"ui-styles__ripple-animation___1hw-c"};
+	module.exports = {"hidden":"ui-styles__hidden___1iC5M","active":"ui-styles__active___2Mklj","inline":"ui-styles__inline___2un_e","fullScreen":"ui-styles__fullScreen___Jm73E","overflow-Hidden":"ui-styles__overflow-Hidden___3walt","align-center":"ui-styles__align-center___2juhF","on-center":"ui-styles__on-center____keC6","noselect":"ui-styles__noselect___8T81l","app-bar":"ui-styles__app-bar___2_Di-","active-item":"ui-styles__active-item___3wpn8","drawer":"ui-styles__drawer___2Oz7d","logo":"ui-styles__logo___38Oq-","list-item":"ui-styles__list-item___2PT_7","list-collapse":"ui-styles__list-collapse___Fu5fa","collapse":"ui-styles__collapse___28mRv","list-expand":"ui-styles__list-expand___4Gn1f","non-active-item":"ui-styles__non-active-item___1plCe","table":"ui-styles__table___3sCJv","wave-animation":"ui-styles__wave-animation___Fz53K","ripple-animation":"ui-styles__ripple-animation___1hw-c"};
 
 /***/ },
 /* 321 */,
@@ -39838,6 +39838,10 @@
 
 	var _reactRouter = __webpack_require__(263);
 
+	var _uiStyles = __webpack_require__(320);
+
+	var _uiStyles2 = _interopRequireDefault(_uiStyles);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var MainDescription = {
@@ -39856,7 +39860,7 @@
 	    code: " \n    import React from \"react\";\n    import ReactDOM from \"react-dom\";\n\n    import Button from \"./components/button/index\";\n\n    class Main extends React.Component {\n        render(){\n            return(\n                <div className=\"fontScreen\"/>\n                    <Button type=\"raised\" theme=\"light\"/> Button </Button/>\n                    <Button type=\"raised\" theme=\"dark\"/> Button </Button/>\n                    <Button href=\"##\" theme=\"light\" disabled /> Button </Button/>  \n                    <Button type=\"flat\" theme=\"light\" /> Button </Button/>\n                    <Button type=\"flat\" theme=\"light\" disabled /> Button </Button/>\n                    <Button type=\"floating\" theme=\"dark\"/>\n                        <i className=\"material-icons\"/>add</i/>\n                    </Button/>\n                </div/>)\n        };\n    };\n\n    ReactDOM.render(\n        <Main />,\n        document.getElementById(\"root\")\n    );",
 	    props: _react2.default.createElement(
 	        "table",
-	        null,
+	        { className: _uiStyles2.default["table"] },
 	        _react2.default.createElement(
 	            "tbody",
 	            null,
@@ -40140,7 +40144,7 @@
 	    code: "\n        import React from \"react\";\n        import ReactDOM from \"react-dom\";\n\n        import Checkbox from \"./components/checkbox/index\";\n\n        class Main extends React.Component {\n            constructor() {\n                super();\n                this.state = {\n                    checked: false\n                }\n            }\n            check = () =/> {\n                this.setState({ \n                    checked: !this.state.checked\n                })\n            }\n            render(){\n                return(\n                    <div/>\n\n                        <Checkbox \n                            theme=\"light\" \n                            checked= { true }\n                        />\n                        <span/>Checked</span/>\n                        <Checkbox \n                            theme=\"light\" \n                            checked= { false }\n                        /> \n                        <span/>Unchecked</span/>\n                        <Checkbox \n                            theme=\"light\" \n                            checked= { true }\n                            disabled\n                        /> \n                        <span/>Disabled checked</span/>\n                        <Checkbox \n                            theme=\"light\" \n                            checked= { false }\n                            disabled\n                        /> \n                        <span/>Disabled checked</span/>\n                        <Checkbox \n                            theme=\"light\" \n                            handleClick= { this.check }  \n                            checked= { this.state.checked }\n                        /> \n                        <span/>CheckBox</span/>\n                    </div/>\n                )\n            };\n        };\n\n        ReactDOM.render(\n            <Main />,\n            document.getElementById(\"root\")\n        );",
 	    props: _react2.default.createElement(
 	        "table",
-	        null,
+	        { className: _uiStyles2.default["table"] },
 	        _react2.default.createElement(
 	            "tbody",
 	            null,
@@ -40303,7 +40307,7 @@
 	    code: "import React from \"react\";\n        import ReactDOM from \"react-dom\";\n\n        import Dialog from \"./components/dialog/index\";\n        import Button from \"./components/button/index\";\n        import SideNav from \"./components/sideNav/index\";\n\n        class Main extends React.Component {\n            constructor() {\n                super();\n                this.state = {\n                    active: false\n                }\n            }\n\n            handleClick=()=/> {\n                this.setState({ \n                    active: !this.state.active\n                })\n            }\n            actionButtons = [\n                { \n                    className: \"test\",\n                    handleClick: this.handleClick, \n                    label: \"Cancel\", type: \"flat\", \n                    wave: false \n                },\n                { \n                    handleClick: this.handleClick, \n                    label: \"Ok\", \n                    type: \"flat\", \n                    wave: false \n                }\n            ];\n            topButtons = [\n                {  \n                    className: \"top-button\",\n                    label: \"\u2716\", \n                    type: \"floating\", \n                    theme: \"dark\", \n                    handleClick: this.handleClick, \n                    icon: true, \n                    ripple: true },  \n            ];\n            render(){\n                return(\n                    <div className=\"fontScreen\"/>\n                        <Button \n                            label= \"switch\"\n                            handleClick= { this.handleClick }\n                            wave\n                            ripple     \n                        /> \n                        <Dialog \n                            active= { this.state.active }\n                            title=\"Title\"\n                            topButtons= { this.topButtons }\n                            actionButtons= { this.actionButtons }\n                            handleToggle= { this.handleClick } \n                        /> \n                            Some  content\n                        </Dialog/>\n                    </div/>)\n            };\n        };\n\n        ReactDOM.render(\n            <Main />,\n            document.getElementById(\"root\")\n        );",
 	    props: _react2.default.createElement(
 	        "table",
-	        null,
+	        { className: _uiStyles2.default["table"] },
 	        _react2.default.createElement(
 	            "tbody",
 	            null,
@@ -40495,7 +40499,7 @@
 	    code: "import React from \"react\";\n        import ReactDOM from \"react-dom\";\n\n        import SideNav from \"./components/sidenav/index\";\n        import Button from \"./components/button/index\";\n\n        class Main extends React.Component{\n            constructor(){\n                super();\n                this.state = {\n                    active: false\n                }\n                this.handleClick = this.handleClick.bind(this);\n            };\n            handleClick (){ \n                this.setState({ active: !this.state.active });\n            };\n            render(){\n                return(\n                    <div>\n                        <Button \n                            label= \"Toggle\"\n                            handleClick={ this.handleClick } \n                            ripple\n                            wave\n                            theme=\"dark\"\n                        />\n                        <SideNav \n                            active= { this.state.active } \n                            side=\"left\"  \n                            handleToggle= { this.handleClick } \n                        >  \n                                <h3>Your elements.</h3>\n                        </SideNav>           \n                    </div>)\n            };\n        };\n\n        ReactDOM.render(\n            <Main />,\n            document.getElementById(\"root\")\n        );",
 	    props: _react2.default.createElement(
 	        "table",
-	        null,
+	        { className: _uiStyles2.default["table"] },
 	        _react2.default.createElement(
 	            "tbody",
 	            null,

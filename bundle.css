@@ -370,15 +370,15 @@
   to {
     opacity: 1; } }
 
-td, th {
+.ui-styles__table___3sCJv td, .ui-styles__table___3sCJv th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px !important; }
+  padding: 8px; }
 
-th {
+.ui-styles__table___3sCJv th {
   background-color: #dddddd; }
 
-tr:nth-child(even) {
+.ui-styles__table___3sCJv tr:nth-child(even) {
   background-color: #eeeeee; }
 .button__hidden___2v2Si {
   visibility: hidden; }
