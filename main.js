@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { App } from "./containers";
-import { AppBar, NotFound } from "./ui";
+import { AppBar, NotFound, Home } from "./ui";
 import { 
     MainPage, 
     ButtonPage, 
@@ -11,10 +11,20 @@ import {
     DialogPage
 } from "./components-demo";
 
-import { Router, Route, IndexRoute, browserHistory, hashHistory } from "react-router";
+import { 
+    Router, 
+    Route, 
+    IndexRoute,
+    IndexRedirect, 
+    browserHistory, 
+    hashHistory 
+} from "react-router";
+
 ReactDOM.render(
     <Router history={ hashHistory } >
         <Route path="/" component={ App }> 
+            <IndexRedirect to="/Project" />
+            <IndexRoute component={ Home } />
             <Route path="/Components" component={ MainPage } />
             <Route path="/Components/Button" component={ ButtonPage } />
             <Route path="/Components/Checkbox" component={ CheckboxPage } />

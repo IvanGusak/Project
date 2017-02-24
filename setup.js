@@ -3,7 +3,7 @@ require("babel-register")();
 var jsdom = require("jsdom").jsdom;
 
 app.get(/.*/, function root(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + './index.html');
 });
 
 var exposedProperties = ["window", "navigator", "document"];

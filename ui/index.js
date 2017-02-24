@@ -9,3 +9,5 @@ export { ListLink } from "./list-link";
 export { ListHeader } from "./list-header";
 
 export { ListCollapse } from "./list-collapse";
+
+export { Home } from "./home";

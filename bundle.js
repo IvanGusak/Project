@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "56b45eabf3d27a36e4ee"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c8593c2b919ce2bc1e2d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -570,7 +570,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/Project/";
 
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -8468,7 +8468,7 @@
 
 	var _ui = __webpack_require__(318);
 
-	var _componentsDemo = __webpack_require__(378);
+	var _componentsDemo = __webpack_require__(379);
 
 	var _reactRouter = __webpack_require__(263);
 
@@ -8476,15 +8476,17 @@
 
 	_reactDom2.default.render(_react2.default.createElement(
 	    _reactRouter.Router,
-	    { history: _reactRouter.browserHistory },
+	    { history: _reactRouter.hashHistory },
 	    _react2.default.createElement(
 	        _reactRouter.Route,
-	        { path: "/Project", component: _containers.App },
-	        _react2.default.createElement(_reactRouter.Route, { path: "/Project/Components", component: _componentsDemo.MainPage }),
-	        _react2.default.createElement(_reactRouter.Route, { path: "/Project/Components/Button", component: _componentsDemo.ButtonPage }),
-	        _react2.default.createElement(_reactRouter.Route, { path: "/Project/Components/Checkbox", component: _componentsDemo.CheckboxPage }),
-	        _react2.default.createElement(_reactRouter.Route, { path: "/Project/Components/SideBar", component: _componentsDemo.SideNavPage }),
-	        _react2.default.createElement(_reactRouter.Route, { path: "/Project/Components/Dialog", component: _componentsDemo.DialogPage })
+	        { path: "/", component: _containers.App },
+	        _react2.default.createElement(_reactRouter.IndexRedirect, { to: "/Project" }),
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _ui.Home }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/Components", component: _componentsDemo.MainPage }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/Components/Button", component: _componentsDemo.ButtonPage }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/Components/Checkbox", component: _componentsDemo.CheckboxPage }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/Components/SideBar", component: _componentsDemo.SideNavPage }),
+	        _react2.default.createElement(_reactRouter.Route, { path: "/Components/Dialog", component: _componentsDemo.DialogPage })
 	    ),
 	    _react2.default.createElement(_reactRouter.Route, { path: "*", component: _ui.NotFound })
 	), document.getElementById("root"));
@@ -29683,7 +29685,7 @@
 	  }
 	});
 
-	var _List = __webpack_require__(376);
+	var _List = __webpack_require__(377);
 
 	Object.defineProperty(exports, "List", {
 	  enumerable: true,
@@ -29692,7 +29694,7 @@
 	  }
 	});
 
-	var _Footer = __webpack_require__(377);
+	var _Footer = __webpack_require__(378);
 
 	Object.defineProperty(exports, "Footer", {
 	  enumerable: true,
@@ -29732,7 +29734,7 @@
 
 	var _ui = __webpack_require__(318);
 
-	var _components = __webpack_require__(363);
+	var _components = __webpack_require__(364);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34873,6 +34875,15 @@
 	  }
 	});
 
+	var _home = __webpack_require__(363);
+
+	Object.defineProperty(exports, "Home", {
+	  enumerable: true,
+	  get: function get() {
+	    return _home.Home;
+	  }
+	});
+
 /***/ },
 /* 319 */
 /***/ function(module, exports, __webpack_require__) {
@@ -34921,8 +34932,8 @@
 	                "header",
 	                { className: "" + _uiStyles2.default["app-bar"] },
 	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { className: _uiStyles2.default["logo"] + " ", to: "/" },
+	                    "a",
+	                    { href: "/Project/", className: _uiStyles2.default["logo"] + " " },
 	                    "React JS"
 	                )
 	            );
@@ -35027,6 +35038,10 @@
 
 	var _reactRouter = __webpack_require__(263);
 
+	var _uiStyles = __webpack_require__(320);
+
+	var _uiStyles2 = _interopRequireDefault(_uiStyles);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35049,11 +35064,11 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                null,
+	                { className: _uiStyles2.default["not-found"] },
 	                "Page not found. Back to  ",
 	                _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: "/Project" },
+	                    { to: "/" },
 	                    "main"
 	                )
 	            );
@@ -38351,10 +38366,60 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Home = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(79);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_React$Component) {
+	    _inherits(Home, _React$Component);
+
+	    function Home() {
+	        _classCallCheck(this, Home);
+
+	        return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+	    }
+
+	    _createClass(Home, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "h1",
+	                null,
+	                "Home Page"
+	            );
+	        }
+	    }]);
+
+	    return Home;
+	}(_react2.default.Component);
+
+	exports.Home = Home;
+
+/***/ },
+/* 364 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _index = __webpack_require__(364);
+	var _index = __webpack_require__(365);
 
 	Object.defineProperty(exports, "Button", {
 	  enumerable: true,
@@ -38363,7 +38428,7 @@
 	  }
 	});
 
-	var _index2 = __webpack_require__(367);
+	var _index2 = __webpack_require__(368);
 
 	Object.defineProperty(exports, "Checkbox", {
 	  enumerable: true,
@@ -38372,7 +38437,7 @@
 	  }
 	});
 
-	var _index3 = __webpack_require__(370);
+	var _index3 = __webpack_require__(371);
 
 	Object.defineProperty(exports, "SideNav", {
 	  enumerable: true,
@@ -38381,7 +38446,7 @@
 	  }
 	});
 
-	var _index4 = __webpack_require__(373);
+	var _index4 = __webpack_require__(374);
 
 	Object.defineProperty(exports, "Dialog", {
 	  enumerable: true,
@@ -38391,7 +38456,7 @@
 	});
 
 /***/ },
-/* 364 */
+/* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38407,7 +38472,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _button = __webpack_require__(365);
+	var _button = __webpack_require__(366);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -38489,15 +38554,15 @@
 	exports.Button = Button;
 
 /***/ },
-/* 365 */
+/* 366 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"hidden":"button__hidden___2v2Si","active":"button__active___3V_1s","inline":"button__inline___3d2HE","fullScreen":"button__fullScreen___1YaX9","raised-light":"button__raised-light___qfJz_","raised-dark":"button__raised-dark___31Qg9","flat-light":"button__flat-light___1gVcE","flat-dark":"button__flat-dark___WegQJ","floating-light":"button__floating-light___1Jkha","floating-dark":"button__floating-dark___3rioy","overflow-Hidden":"button__overflow-Hidden___1fBRZ","align-center":"button__align-center___3Cfs9","on-center":"button__on-center___2aNZn","wave-animation":"button__wave-animation___Owqp1","ripple-animation":"button__ripple-animation___2KrNI","noselect":"button__noselect___1Xqg-"};
 
 /***/ },
-/* 366 */,
-/* 367 */
+/* 367 */,
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38513,7 +38578,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _checkbox = __webpack_require__(368);
+	var _checkbox = __webpack_require__(369);
 
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 
@@ -38578,15 +38643,15 @@
 	exports.Checkbox = Checkbox;
 
 /***/ },
-/* 368 */
+/* 369 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"hidden":"checkbox__hidden___3hQ_q","active":"checkbox__active___3IyHD","inline":"checkbox__inline___HXMMb","fullScreen":"checkbox__fullScreen___1cU_z","light":"checkbox__light___353Pr","dark":"checkbox__dark___1-Ukj","overflow-Hidden":"checkbox__overflow-Hidden___3yOAg","align-center":"checkbox__align-center___18Xqb","on-center":"checkbox__on-center___3anqG","ripple-animation":"checkbox__ripple-animation___3m_YQ","noselect":"checkbox__noselect___Dy8y2","wave-animation":"checkbox__wave-animation___3xPLL"};
 
 /***/ },
-/* 369 */,
-/* 370 */
+/* 370 */,
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38606,7 +38671,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _sideNav = __webpack_require__(371);
+	var _sideNav = __webpack_require__(372);
 
 	var _sideNav2 = _interopRequireDefault(_sideNav);
 
@@ -38813,15 +38878,15 @@
 	exports.SideNav = SideNav;
 
 /***/ },
-/* 371 */
+/* 372 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"hidden":"sideNav__hidden___3Y6sN","active":"sideNav__active___36x1b","inline":"sideNav__inline___3NCcz","fullScreen":"sideNav__fullScreen___2-dsn","opened":"sideNav__opened___E-X8d","backSide":"sideNav__backSide___3m3Y4","closed":"sideNav__closed___rhLca","overflow-Hidden":"sideNav__overflow-Hidden___3LYNf","align-center":"sideNav__align-center___2SPA7","on-center":"sideNav__on-center___1SzbT","noselect":"sideNav__noselect___3d-cA","sideMenu":"sideNav__sideMenu___2mRIY","wave-animation":"sideNav__wave-animation___98U50","ripple-animation":"sideNav__ripple-animation___2tLGN"};
 
 /***/ },
-/* 372 */,
-/* 373 */
+/* 373 */,
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38839,9 +38904,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _index = __webpack_require__(364);
+	var _index = __webpack_require__(365);
 
-	var _dialog = __webpack_require__(374);
+	var _dialog = __webpack_require__(375);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -38937,15 +39002,15 @@
 	exports.Dialog = Dialog;
 
 /***/ },
-/* 374 */
+/* 375 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"hidden":"dialog__hidden___2CU6o","active":"dialog__active___ZYnf8","inline":"dialog__inline___1zw87","fullScreen":"dialog__fullScreen___2hJyl","overlay":"dialog__overlay___GhKTJ","overflow-Hidden":"dialog__overflow-Hidden___3cgKN","align-center":"dialog__align-center___OxwdX","on-center":"dialog__on-center___1V0U6","dialog":"dialog__dialog___1Yh2F","noselect":"dialog__noselect___1vZQs","dialog-animation":"dialog__dialog-animation___2Q-Db","title":"dialog__title___2_MkI","content":"dialog__content___3egAl","action":"dialog__action___3gI_r","action-button":"dialog__action-button___3V5gC","title-button":"dialog__title-button___2D-VT","wave-animation":"dialog__wave-animation___2rkpu","ripple-animation":"dialog__ripple-animation___3MvLQ"};
 
 /***/ },
-/* 375 */,
-/* 376 */
+/* 376 */,
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38994,7 +39059,7 @@
 	        key: "collapseList",
 	        value: function collapseList(e) {
 	            var target = e.target;
-	            if (target.getAttribute("href").match(/Project\/Components/)) {
+	            if (target.getAttribute("href").match(/Components/)) {
 	                this.setState({
 	                    active: !this.state.active
 	                });
@@ -39003,7 +39068,7 @@
 	                    active: false
 	                });
 	            }
-	            if (target.getAttribute("href").match(/Project\/Components\//i)) {
+	            if (target.getAttribute("href").match(/Components\//i)) {
 	                this.setState({
 	                    active: true
 	                });
@@ -39019,18 +39084,18 @@
 	                _react2.default.createElement(
 	                    _ui.ListHeader,
 	                    null,
-	                    _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project/Components", label: "Components" }),
+	                    _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Components", label: "Components" }),
 	                    _react2.default.createElement(
 	                        _ui.ListCollapse,
 	                        { active: this.state.active },
-	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project/Components/Button", label: "Button" }),
-	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project/Components/Dialog", label: "Dialog" }),
-	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project/Components/Checkbox", label: "CheckBox" }),
-	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project/Components/SideBar", label: "Sidebar" })
+	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Components/Button", label: "Button" }),
+	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Components/Dialog", label: "Dialog" }),
+	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Components/Checkbox", label: "CheckBox" }),
+	                        _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Components/SideBar", label: "Sidebar" })
 	                    )
 	                ),
-	                _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/", label: "Project" }),
-	                _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project", label: "Home" })
+	                _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/Project", label: "Project" }),
+	                _react2.default.createElement(_ui.ListLink, { activeOnlyWhenExact: true, to: "/", label: "Home" })
 	            );
 	        }
 	    }]);
@@ -39041,7 +39106,7 @@
 	exports.List = List;
 
 /***/ },
-/* 377 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39091,7 +39156,7 @@
 	exports.Footer = Footer;
 
 /***/ },
-/* 378 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39100,7 +39165,7 @@
 	    value: true
 	});
 
-	var _mainPage = __webpack_require__(379);
+	var _mainPage = __webpack_require__(380);
 
 	Object.defineProperty(exports, "MainPage", {
 	    enumerable: true,
@@ -39109,7 +39174,7 @@
 	    }
 	});
 
-	var _button = __webpack_require__(382);
+	var _button = __webpack_require__(383);
 
 	Object.defineProperty(exports, "ButtonPage", {
 	    enumerable: true,
@@ -39118,7 +39183,7 @@
 	    }
 	});
 
-	var _drawer = __webpack_require__(383);
+	var _drawer = __webpack_require__(384);
 
 	Object.defineProperty(exports, "SideNavPage", {
 	    enumerable: true,
@@ -39127,7 +39192,7 @@
 	    }
 	});
 
-	var _checkbox = __webpack_require__(384);
+	var _checkbox = __webpack_require__(385);
 
 	Object.defineProperty(exports, "CheckboxPage", {
 	    enumerable: true,
@@ -39136,7 +39201,7 @@
 	    }
 	});
 
-	var _dialog = __webpack_require__(385);
+	var _dialog = __webpack_require__(386);
 
 	Object.defineProperty(exports, "DialogPage", {
 	    enumerable: true,
@@ -39145,7 +39210,7 @@
 	    }
 	});
 
-	var _descriptions = __webpack_require__(386);
+	var _descriptions = __webpack_require__(387);
 
 	Object.defineProperty(exports, "ButtonDescription", {
 	    enumerable: true,
@@ -39179,7 +39244,7 @@
 	});
 
 /***/ },
-/* 379 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39195,13 +39260,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(380);
+	var _styles = __webpack_require__(381);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
 	var _reactRouter = __webpack_require__(263);
 
-	var _ = __webpack_require__(378);
+	var _ = __webpack_require__(379);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39360,15 +39425,15 @@
 	exports.MainPage = MainPage;
 
 /***/ },
-/* 380 */
+/* 381 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"container":"styles__container___2yq7l","link":"styles__link___3IEO4"};
 
 /***/ },
-/* 381 */,
-/* 382 */
+/* 382 */,
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39384,7 +39449,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _components = __webpack_require__(363);
+	var _components = __webpack_require__(364);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39436,7 +39501,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    _components.Button,
-	                    { href: "##", type: "floating", theme: "light", ripple: true },
+	                    { type: "floating", theme: "light", ripple: true },
 	                    _react2.default.createElement(
 	                        "i",
 	                        { className: "material-icons" },
@@ -39455,7 +39520,7 @@
 	exports.ButtonPage = ButtonPage;
 
 /***/ },
-/* 383 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39471,7 +39536,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _components = __webpack_require__(363);
+	var _components = __webpack_require__(364);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39543,7 +39608,7 @@
 	exports.SideNavPage = SideNavPage;
 
 /***/ },
-/* 384 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39559,7 +39624,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _components = __webpack_require__(363);
+	var _components = __webpack_require__(364);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39655,7 +39720,7 @@
 	exports.CheckboxPage = CheckboxPage;
 
 /***/ },
-/* 385 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39671,7 +39736,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _components = __webpack_require__(363);
+	var _components = __webpack_require__(364);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39757,7 +39822,7 @@
 	exports.DialogPage = DialogPage;
 
 /***/ },
-/* 386 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";

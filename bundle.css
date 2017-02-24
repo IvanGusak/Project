@@ -335,6 +335,10 @@
   .ui-styles__list-item___2PT_7:hover:focus {
     color: #333;
     background-color: rgba(0, 0, 0, 0.12); }
+  .ui-styles__list-item___2PT_7 *,
+  .ui-styles__list-item___2PT_7:not(:active) *,
+  .ui-styles__list-item___2PT_7:hover * {
+    text-decoration: none; }
 
 .ui-styles__list-collapse___Fu5fa {
   display: block;

@@ -61,7 +61,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: #333;
-    cursor: pointer; 
+    cursor: pointer;  
 
     &:hover {
         color: white;
@@ -71,6 +71,9 @@
     &:focus {  
         color: #333;
         background-color: rgba(0,0,0,0.12);
+    }
+    & * {
+       text-decoration: none; 
     }
 }
 .list-collapse {
@@ -89,6 +92,9 @@
         content: "";
         transform: translateX(-50px);
     }
+}
+.not-found {
+    
 }
 @keyframes collapse {
     from {opacity: 0}

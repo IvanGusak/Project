@@ -7,7 +7,7 @@ class AppBar extends React.Component{
 
         return(
             <header className={ `${ styles["app-bar"] }` }>
-                <Link className={`${ styles["logo"] } `} to='/'>React JS</Link>  
+                <a href="/Project/" className={`${ styles["logo"] } `} >React JS</a>  
             </header>
         )
     }

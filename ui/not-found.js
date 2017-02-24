@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router"; 
 
+import styles from "../styles/ui-styles.scss";
+
 class NotFound extends React.Component {
     render () {
         return (
-            <div>
-                Page not found. Back to  <Link to='/Project'>main</Link>
+            <div className={styles["not-found"]}>
+                Page not found. Back to  <Link to='/'>main</Link>
             </div>
         )
     }

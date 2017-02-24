@@ -15,7 +15,6 @@ module.exports = {
     hot: true,
     inline : true,
     port : 3333,
-    public:'0.0.0.0:3333',
     historyApiFallback: true,
   },
   externals: {
@@ -42,7 +41,7 @@ module.exports = {
   watch: true,
   postcss: [autoprefixer],
   plugins: [
-        new ExtractTextPlugin("bundle.css"),
+        new ExtractTextPlugin("/bundle.css"),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
           "process.env.NODE_ENV": JSON.stringify("development"),
