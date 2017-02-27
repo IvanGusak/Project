@@ -6,9 +6,9 @@ var socket = require('socket.io-client')('https://ivangusak.github.io/Project/')
   socket.on('disconnect', function(){});
 var jsdom = require("jsdom").jsdom;
 
-//app.get(/.*/, function root(req, res) {
-  //res.sendFile(__dirname + './index.html');
-//});
+app.get(/.*/, function root(req, res) {
+  res.sendFile(__dirname + './index.html');
+});
 
 var exposedProperties = ["window", "navigator", "document"];
 
