@@ -1,9 +1,10 @@
 require("babel-register")();
-var socket = require('socket.io-client')('https://ivangusak.github.io/Project/');
+
+/*var socket = require('socket.io-client')('https://ivangusak.github.io/Project/');
   socket.on('connect', function(){});
   socket.on('event', function(data){});
   socket.on('disconnect', function(){});
-var jsdom = require("jsdom").jsdom;
+var jsdom = require("jsdom").jsdom;*/
 
 app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + './index.html');
