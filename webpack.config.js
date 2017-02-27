@@ -6,7 +6,7 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry : [
-    "./main.js" || "https://ivangusak.github.io/Project/main.js",
+      "./main.js" || "https://ivangusak.github.io/Project/main.js",
       
   ],
   output : {
@@ -17,7 +17,7 @@ module.exports = {
   devServer:  {
     hot: true,
     inline : true,
-    port : 3333,
+    port : 3333 || "/Project/",
     historyApiFallback: true,
     public:"https://ivangusak.github.io/Project/"
   },
