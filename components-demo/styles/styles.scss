@@ -1,8 +1,11 @@
 .container {
     display: block;
+    position: relative;
     width: 850px;
-    padding: 14px 150px 150px 50px;
-    overflow-y: hidden;
+    padding: 14px 50px 150px 50px;
+    margin-bottom: 250px;
+    overflow: auto;
+    border: 3px solid rgba(0,0,0,0.12);  
 }
 .link {
     cursor: pointer;

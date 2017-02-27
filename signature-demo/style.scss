@@ -1,0 +1,42 @@
+.canvas{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left: 0;
+  margin: auto;
+  display:block;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.canvas:active {
+  cursor: default;
+}
+.canvas{
+  position: relative;
+  top:0;
+  right:0;
+  bottom:0;
+  left: 0;
+  margin: auto;
+  display:block;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.canvas:active {
+  cursor: default;
+}
+.container {
+    display: block;
+    position: relative;
+    width: 850px;
+    padding: 14px 50px 250px 50px;
+}
+.frame {
+	height: 406px;
+	width: 656px;
+	margin: auto;
+    border: 3px solid rgba(0,0,0,0.12);
+	border-radius: 10px;
+}
+

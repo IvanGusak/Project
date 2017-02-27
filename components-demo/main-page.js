@@ -53,12 +53,11 @@ class MainPage extends React.Component {
                     <li>Checkbox component =><a className={styles["link"]} onClick={this.renderDescription}>CheckBox</a></li>
                     <li>Dialog component =><a className={styles["link"]} onClick={this.renderDescription}>Dialog</a></li>
                 </ul>
-                <h2>Usage</h2> 
                 <hr/>             
                 <div>
                     <h3>{ this.state.header }</h3> 
                     <pre>{ this.state.code }</pre>
-                    { this.state.props ? <h2>Properties</h2> : "" }
+                    { this.state.props ? <h3>Properties: </h3> : "" }
                     { this.state.props }
                 </div>
                 {this.props.children}

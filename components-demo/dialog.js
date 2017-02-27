@@ -1,6 +1,9 @@
 import React from "react";
 
 import { Button, Dialog } from "../components";
+import { DialogDescription } from "./";
+
+import styles from "./styles/styles.scss";
 
 class DialogPage extends React.Component {
     constructor() {
@@ -53,12 +56,18 @@ class DialogPage extends React.Component {
     ];
     render(){
         return(
-            <div >
+            <div className={styles["container"]}>
+                <h2>{ DialogDescription.header }</h2>
+                <hr/>
+                <pre><code>{ DialogDescription.code }</code></pre>
+                <h3>Demo</h3>
+                <hr/>
                 <Button 
-                    label= "switch"
+                    label= "Click Me"
                     handleClick= { this.handleClick }
                     wave
-                    ripple     
+                    ripple   
+                    theme="dark"  
                 /> 
                 <Dialog 
                     active= { this.state.active }
@@ -69,6 +78,9 @@ class DialogPage extends React.Component {
                 > 
                     { this.text }   
                 </Dialog>
+                <h3>Properties: </h3>
+                <hr/> 
+                { DialogDescription.props }
             </div>)
     };
 };

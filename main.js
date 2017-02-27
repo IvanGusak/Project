@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { App } from "./containers";
+import { Triangle } from "./triangles-demo";
+import { Signature } from "./signature-demo";
 import { AppBar, NotFound, Home } from "./ui";
 import { 
     MainPage, 
@@ -10,7 +12,6 @@ import {
     CheckboxPage,
     DialogPage
 } from "./components-demo";
-
 import { 
     Router, 
     Route, 
@@ -30,6 +31,8 @@ ReactDOM.render(
             <Route path="/Components/Checkbox" component={ CheckboxPage } />
             <Route path="/Components/SideBar" component={ SideNavPage } />
             <Route path="/Components/Dialog" component={ DialogPage } />  
+            <Route path="/Triangle" component={ Triangle } />
+            <Route path="/Signature" component={ Signature } />
         </Route>
         <Route path="*" component={ NotFound } />
     </Router>,

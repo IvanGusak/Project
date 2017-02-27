@@ -32,7 +32,7 @@ const MainDescription = {
 }
 
 const ButtonDescription = {
-    header: <p>Some example how to use {`<Button />`} component:</p>,
+    header: <p> Example based on {`<Button />`} component:</p>,
     code: ` 
     import React from "react";
     import ReactDOM from "react-dom";
@@ -45,7 +45,7 @@ const ButtonDescription = {
                 <div className="fontScreen"/>
                     <Button type="raised" theme="light"/> Button </Button/>
                     <Button type="raised" theme="dark"/> Button </Button/>
-                    <Button href="##" theme="light" disabled /> Button </Button/>  
+                    <Button theme="light" disabled /> Button </Button/>  
                     <Button type="flat" theme="light" /> Button </Button/>
                     <Button type="flat" theme="light" disabled /> Button </Button/>
                     <Button type="floating" theme="dark"/>
@@ -133,7 +133,7 @@ const ButtonDescription = {
     }
 
 const CheckBoxDescription = {
-    header: <p>{`<Checkbox />`} component</p>,
+    header: <p>Example based on {`<Checkbox />`} component:</p>,
     code: `
         import React from "react";
         import ReactDOM from "react-dom";
@@ -236,7 +236,7 @@ const CheckBoxDescription = {
         </table>
 }
 const DialogDescription = {
-    header: <p>{`<Dialog />`} component:</p>,
+    header: <p>Example based on {`<Dialog />`} component:</p>,
     code: 
         `import React from "react";
         import ReactDOM from "react-dom";
@@ -358,7 +358,7 @@ const DialogDescription = {
 }
 
 const SideNavDescription = {
-    header: <p>{`<SideNav />`} component</p>,
+    header: <p>Example based on {`<SideNav />`} component:</p>,
     code: 
         `import React from "react";
         import ReactDOM from "react-dom";

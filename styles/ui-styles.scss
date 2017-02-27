@@ -6,28 +6,20 @@
     box-shadow: 1px 1px 2px 1px #aaa;
 }
 .active-item {
-    transition: 0.3s;
-    transform: translateX(10px);
+    transition: 0.15s;
+    transform: translateX(0px);
     background-color: rgba(0,0,0,0.12);
-    &::before {
-        content: "";
-        transform: translateX(-40px);
-        height: 44px;
-        width: 10px;
-        background-color: rgba(0,0,0,0.3);
-        float: left;
-    }
 }
 .drawer {
-    position: relative;
+    position: fixed;
     display: inline-block;
+    transition: 0.3s;
     height: 100%;
     width: 250px;
     padding: 0px !important;
     margin: 0px;
-    margin-top: 4px;
     box-shadow: 1px 0px 1px 1px #ddd;
-    overflow: auto;
+    overflow-y: hidden;
     background-color:rgba(0,0,0,0.12);
 }
 .logo {  
@@ -48,13 +40,14 @@
 .list-item,
 .list-item:not(:active),
 .list-item:hover  {
-    transition: 0.3s;
+    transition: 0.15s;
     display: inline-block;
     margin: 0px;
     padding: 0px 30px;
     height: 44px;
     line-height: 44px;
-    width: 100%;
+    width: 260px;
+    border-left: 10px solid rgba(0,0,0,0.3); 
     font-weight: 500;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -62,43 +55,57 @@
     text-decoration: none;
     color: #333;
     cursor: pointer;  
-
     &:hover {
         color: white;
-        background-color: rgba(0,0,0,0.3);
+        background-color: #999;
     }
 
     &:focus {  
         color: #333;
-        background-color: rgba(0,0,0,0.12);
+        background-color: #bbb;
     }
     & * {
        text-decoration: none; 
     }
 }
 .list-collapse {
-    display: block;
-    animation-name: collapse;
-    animation-duration: 0.3s;
-    border-left: 10px solid rgba(0,0,0,0.3);
-    border-top: 1px solid rgba(0,0,0,0.12);
-    border-bottom: 1px solid rgba(0,0,0,0.12);
-}
-.list-expand {
-    display: none;   
-}
-.non-active-item {
-    &::before {
-        content: "";
-        transform: translateX(-50px);
+    animation: collapse 0.15s ease-out;
+    height: 176px;
+    opacity: 1;
+    & a {
+        padding-left: 75px !important;
     }
 }
-.not-found {
-
+.list-expand {
+    transition: 0.15s ease-out;
+    height: 0px;
+    opacity: 0;
+    & a {
+        padding-left: 75px !important;
+    }
 }
-@keyframes collapse {
-    from {opacity: 0}
-    to {opacity: 1}
+.non-active-item {
+    transition: 0.15s;
+    transform: translateX(-10px);
+}
+.not-found {
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 250px;
+    width: 500px;
+    padding: 50px 0px;
+    margin: auto;
+    margin-top: 150px;
+    border: 3px solid rgba(0,0,0,0.15);
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
 }
 .table {
     & td, th {
@@ -111,5 +118,18 @@
     }
     & tr:nth-child(even) {
         background-color: #eeeeee;
+    }
+}
+@keyframes collapse {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 176px;
     }
 }

@@ -8,7 +8,7 @@ const propTypes = {
 }
 
 const defaultProp = {
-    active: false
+    ///active: false
 }
 
 class ListCollapse extends React.Component {

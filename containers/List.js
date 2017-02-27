@@ -43,7 +43,8 @@ class List extends React.Component {
                         <ListLink activeOnlyWhenExact={true} to="/Components/SideBar" label="Sidebar" />
                     </ListCollapse>
                 </ListHeader>
-                <ListLink activeOnlyWhenExact={true} to="/Project" label="Project" />
+                <ListLink activeOnlyWhenExact={true} to="/Triangle" label="Triangles" />
+                <ListLink activeOnlyWhenExact={true} to="/Signature" label="Signature" />
                 <ListLink activeOnlyWhenExact={true} to="/" label="Home" />
             </div>
         )

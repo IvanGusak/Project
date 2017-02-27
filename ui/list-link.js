@@ -4,15 +4,17 @@ import { Link, Route } from "react-router-dom";
 import styles from "../styles/ui-styles.scss";
 
 const propsTypes = {
-    activeOnlyWhenExact: React.PropTypes.bool,
+    activeOnlyWhenExact: React.PropTypes.bool,    
     children: React.PropTypes.node,
     className: React.PropTypes.string,
+    handleClick: React.PropTypes.func,
     label: React.PropTypes.string,
     to: React.PropTypes.string
 };
 const defaultProps = {
     activeOnlyWhenExact: false,
     className: "",
+    handleClick: () => {},
     label: "",
     to: "/"
 };
@@ -23,7 +25,7 @@ class ListLink extends React.Component {
         return (
             <Route path={ this.props.to } exact={ this.props.activeOnlyWhenExact } children={({ match }) => (
                 <Link
-                    onClick={this.handleClick}
+                    onClick={ this.props.handleClick }
                     className={`
                             ${ match ? styles["active-item"] : styles["non-active-item"]} 
                             ${ styles["list-item"]}
