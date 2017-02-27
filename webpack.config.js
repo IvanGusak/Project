@@ -5,7 +5,9 @@ const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
-  entry : "./main.js",
+  entry : [
+      "./main.js",
+  ],
   output : {
     path:"./",
     publicPath: "/Project",
