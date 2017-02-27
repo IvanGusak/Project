@@ -16,6 +16,7 @@ module.exports = {
     inline : true,
     port : 3333,
     historyApiFallback: true,
+    public:'0.0.0.0:3333'
   },
   externals: {
     "cheerio": "window",
