@@ -15,9 +15,9 @@ module.exports = {
     filename : "bundle.js",
   },
   devServer:  {
-    hot: true,
-    inline : true,
-    port : 3333 || "/Project/",
+    //hot: true,
+    //inline : true,
+    port : 3333 ,
     historyApiFallback: true,
     public:"https://ivangusak.github.io/Project/"
   },
