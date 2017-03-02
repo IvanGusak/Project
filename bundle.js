@@ -21548,13 +21548,13 @@
 				return _react2.default.createElement(
 					"div",
 					{ className: _common2.default["fullScreen"] },
-					_react2.default.createElement(_ui.AppBar, null),
 					_react2.default.createElement(
 						"div",
 						{ className: _containerStyles2.default["main"] },
 						_react2.default.createElement(
 							_ui.Drawer,
 							null,
+							_react2.default.createElement(_ui.AppBar, null),
 							_react2.default.createElement(_.List, null)
 						),
 						_react2.default.createElement(
@@ -26720,11 +26720,27 @@
 	            return _react2.default.createElement(
 	                "header",
 	                { className: "" + _uiStyles2.default["app-bar"] },
+	                _react2.default.createElement("hr", { className: _uiStyles2.default["underscore"] }),
 	                _react2.default.createElement(
-	                    "a",
-	                    { href: "/Project/", className: _uiStyles2.default["logo"] + " " },
-	                    "React JS"
-	                )
+	                    "h1",
+	                    null,
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: "/" },
+	                        "Project"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "Demo published on gh-pages"
+	                ),
+	                _react2.default.createElement(
+	                    "span",
+	                    null,
+	                    "Created by Ivan Gusak"
+	                ),
+	                _react2.default.createElement("hr", { className: _uiStyles2.default["underscore"] })
 	            );
 	        }
 	    }]);
@@ -26739,7 +26755,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"hidden":"ui-styles__hidden___1iC5M","active":"ui-styles__active___2Mklj","inline":"ui-styles__inline___2un_e","fullScreen":"ui-styles__fullScreen___Jm73E","overflow-Hidden":"ui-styles__overflow-Hidden___3walt","align-center":"ui-styles__align-center___2juhF","on-center":"ui-styles__on-center____keC6","noselect":"ui-styles__noselect___8T81l","app-bar":"ui-styles__app-bar___2_Di-","active-item":"ui-styles__active-item___3wpn8","drawer":"ui-styles__drawer___2Oz7d","logo":"ui-styles__logo___38Oq-","list-item":"ui-styles__list-item___2PT_7","list-collapse":"ui-styles__list-collapse___Fu5fa","collapse":"ui-styles__collapse___28mRv","list-expand":"ui-styles__list-expand___4Gn1f","non-active-item":"ui-styles__non-active-item___1plCe","not-found":"ui-styles__not-found___14IY4","table":"ui-styles__table___3sCJv","wave-animation":"ui-styles__wave-animation___Fz53K","ripple-animation":"ui-styles__ripple-animation___1hw-c"};
+	module.exports = {"hidden":"ui-styles__hidden___1iC5M","active":"ui-styles__active___2Mklj","inline":"ui-styles__inline___2un_e","fullScreen":"ui-styles__fullScreen___Jm73E","overflow-Hidden":"ui-styles__overflow-Hidden___3walt","align-center":"ui-styles__align-center___2juhF","on-center":"ui-styles__on-center____keC6","noselect":"ui-styles__noselect___8T81l","app-bar":"ui-styles__app-bar___2_Di-","active-item":"ui-styles__active-item___3wpn8","drawer":"ui-styles__drawer___2Oz7d","logo":"ui-styles__logo___38Oq-","rise":"ui-styles__rise___G88jL","list-item":"ui-styles__list-item___2PT_7","list-collapse":"ui-styles__list-collapse___Fu5fa","list-expand":"ui-styles__list-expand___4Gn1f","non-active-item":"ui-styles__non-active-item___1plCe","not-found":"ui-styles__not-found___14IY4","table":"ui-styles__table___3sCJv","underscore":"ui-styles__underscore___nwvze","wave-animation":"ui-styles__wave-animation___Fz53K","ripple-animation":"ui-styles__ripple-animation___1hw-c"};
 
 /***/ },
 /* 245 */,
@@ -30176,6 +30192,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _uiStyles = __webpack_require__(244);
+
+	var _uiStyles2 = _interopRequireDefault(_uiStyles);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30197,9 +30217,13 @@
 	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
-	                "h1",
+	                "div",
 	                null,
-	                "Home Page"
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: _uiStyles2.default["logo"] },
+	                    "Welcome"
+	                )
 	            );
 	        }
 	    }]);

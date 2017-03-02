@@ -1,5 +1,5 @@
 {
-  "name": "r",
+  "name": "react-example",
   "homepage": "https://ivangusak.github.io/Project",
   "version": "1.0.0",
   "main": "./bundle.js",

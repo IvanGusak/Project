@@ -2,7 +2,11 @@ import React from "react";
 
 import styles from "../styles/container-styles.scss";
 
-import { ListHeader, ListCollapse, ListLink } from "../ui";
+import { 
+    ListHeader, 
+    ListCollapse, 
+    ListLink
+} from "../ui";
 
 class List extends React.Component {
     constructor() {

@@ -1,9 +1,15 @@
 import React from "react";
 
+import styles from "../styles/ui-styles.scss";
+
 class Home extends React.Component {
     render() {
         return (
-            <h1>Home Page</h1>
+            <div >
+                <div className={styles["logo"]}>
+                    Welcome
+                </div>
+            </div> 
         )
     }
 }

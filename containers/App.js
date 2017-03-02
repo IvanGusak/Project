@@ -12,9 +12,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className={ common["fullScreen"] }>
-				<AppBar/>
 				<div className={ styles["main"] } >
 					<Drawer>
+						<AppBar/>
 						<List/>
 					</Drawer>
 					<div className={ styles["output-box"] }>

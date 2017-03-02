@@ -6,7 +6,7 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry : [
-      "./main.js" || "https://ivangusak.github.io/Project/main.js",
+      "./main.js",
       
   ],
   output : {
@@ -15,11 +15,11 @@ module.exports = {
     filename : "bundle.js",
   },
   /*devServer:  {
-    //hot: true,
-    //inline : true,
+    hot: true,
+    inline : true,
     port : 3333 ,
     historyApiFallback: true,
-    public:"https://ivangusak.github.io/Project/"
+    //public:"https://ivangusak.github.io/Project/"
   },*/
   externals: {
     "cheerio": "window",
