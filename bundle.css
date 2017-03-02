@@ -174,10 +174,9 @@
   display: block;
   right: 0px;
   left: 0px;
+  padding-top: 24px;
   max-width: 850px;
-  height: 97%;
-  margin: auto;
-  margin-top: 2%; }
+  margin: 0px auto; }
 
 .container-styles__footer___2wzP0 {
   position: fixed;
@@ -319,7 +318,7 @@
   position: relative;
   height: 450px;
   width: 450px;
-  margin: 24px auto 0px auto;
+  margin: 0px auto;
   border-radius: 350px;
   line-height: 450px;
   -ms-flex-line-pack: center;

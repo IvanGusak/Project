@@ -14,13 +14,13 @@ module.exports = {
     publicPath: "/Project",
     filename : "bundle.js",
   },
-  devServer:  {
+  /*devServer:  {
     hot: true,
     inline : true,
     port : 3333 ,
     historyApiFallback: true,
     //public:"https://ivangusak.github.io/Project/"
-  },
+  },*/
   externals: {
     "cheerio": "window",
     "react/lib/ExecutionEnvironment": true,
