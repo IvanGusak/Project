@@ -19,7 +19,7 @@ module.exports = {
     inline : true,
     port : 3333 ,
     historyApiFallback: true,
-    //public:"https://ivangusak.github.io/Project/"
+    public:"https://ivangusak.github.io/Project/"
   },*/
   externals: {
     "cheerio": "window",

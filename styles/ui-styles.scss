@@ -46,7 +46,7 @@
     background-color:#f5f5f5;
 }
 .logo {    
-    animation: rise 1.5s ease-in-out;
+    animation: rise 1s ease-in-out;
     position: relative;
     height: 450px;
     width: 450px;
@@ -63,9 +63,6 @@
     color: #fff;
     background-color: #ff6c37;
     overflow: hidden;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000;
 }
 .list-item,
 .list-item:not(:active),
@@ -168,11 +165,14 @@
 }
 
 @keyframes rise {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(100%);
     }
-    to {
+    50% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
         transform: translateY(0%);
     }

@@ -11,9 +11,10 @@
     overflow: auto;
     background-color: #f5f5f5;
 }
-.output-box {    
+.output-box {   
     position: relative;
-    display: block;
+    display: block; 
+    transition: 0.5s ease-in-out;
     right: 0px;
     left: 0px;
     padding-top: 24px;
@@ -32,5 +33,31 @@
 @media screen and (max-width: 1375px) {
     .output-box {
         margin-left: 250px;
+    }
+}
+.appear {
+    animation: appear 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.disappear {
+    animation: disappear 0.5s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

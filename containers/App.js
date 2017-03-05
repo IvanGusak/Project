@@ -4,7 +4,7 @@ import common from "../config/_common.scss";
 import styles from "../styles/container-styles.scss";
 
 import { Link } from "react-router";
-import { List, Footer } from "./";
+import { List, Footer, OutputBox } from "./";
 import { Drawer, AppBar } from "../ui";
 import { Button } from "../components";
 
@@ -17,9 +17,9 @@ class App extends React.Component {
 						<AppBar/>
 						<List/>
 					</Drawer>
-					<div className={ styles["output-box"] }>
+					<OutputBox>
 						{this.props.children}
-					</div>
+					</OutputBox>
 					<Footer/>
 				</div>	
 			</div>

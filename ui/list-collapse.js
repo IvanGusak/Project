@@ -7,10 +7,6 @@ const propTypes = {
     children: React.PropTypes.node
 }
 
-const defaultProp = {
-    ///active: false
-}
-
 class ListCollapse extends React.Component {
     render() {
         return (
@@ -24,6 +20,5 @@ class ListCollapse extends React.Component {
 }
 
 ListCollapse.propTypes = propTypes;
-ListCollapse.defaultProp = defaultProp;
 
 export { ListCollapse };
