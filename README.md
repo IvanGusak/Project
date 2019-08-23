@@ -9,7 +9,8 @@
 *  Dialog component => [Dialog](https://github.com/IvanGusak/Project/tree/master/components/dialog)
 
 ## Usage
-### simple example based on Button component 
+### simple example based on Button component
+### demз => https://ivangusak.github.io/Project/
 
 ```javascript
 import React from "react";
