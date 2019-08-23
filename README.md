@@ -10,7 +10,7 @@
 
 ## Usage
 ### simple example based on Button component
-### demз => https://ivangusak.github.io/Project/
+### demo => https://ivangusak.github.io/Project/
 
 ```javascript
 import React from "react";
